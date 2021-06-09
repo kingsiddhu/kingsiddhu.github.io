@@ -1,0 +1,13 @@
+<html>
+  <head>
+   <title>KING SIDDHU'S WEBSITE</title>
+   <link rel="shortcut icon" href="logo.ico">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>body{ font-family: 'B612', sans-serif; }</style>
+ </head>
+ 
+  <body>
+    
+    <iframe src="butt.html" marginwidth="0" marginheight="0" frameborder="0" width="100%" height="340px"></iframe>
+  </body>
+</html>
