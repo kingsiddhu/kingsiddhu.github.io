@@ -1,23 +1,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://kingsiddhu.github.io</loc>
+    <loc>https://kingsiddhu.github.io/bare.html</loc>
   </url>
   <url>
-    <loc>https://kingsiddhu.github.io/butt</loc>
+    <loc>https://kingsiddhu.github.io/index.html</loc>
   </url>
   <url>
-    <loc>https://kingsiddhu.github.io/an</loc>
+    <loc>https://kingsiddhu.github.io/404.html</loc>
   </url>
   <url>
-    <loc>https://kingsiddhu.github.io/games</loc>
+    <loc>https://kingsiddhu.github.io/pages/af.html</loc>
   </url>
   <url>
-    <loc>https://kingsiddhu.github.io/indexorig</loc>
+    <loc>https://kingsiddhu.github.io/pages/an.html</loc>
   </url>
   <url>
-    <loc>https://kingsiddhu.github.io/movies</loc>
+    <loc>https://kingsiddhu.github.io/pages/games.html</loc>
   </url>
   <url>
-    <loc>https://kingsiddhu.github.io/play</loc>
+    <loc>https://kingsiddhu.github.io/pages/movies.html</loc>
+  </url>
+  <url>
+    <loc>https://kingsiddhu.github.io/pages/indexorig.html</loc>
+  </url>
+  <url>
+    <loc>https://kingsiddhu.github.io/pages/teacher.html</loc>
+  </url>
+  <url>
+    <loc>https://kingsiddhu.github.io/yo.html</loc>
+  </url>
+  <url>
+    <loc>https://kingsiddhu.github.io/butt.html</loc>
+  </url>
+  <url>
+    <loc>https://kingsiddhu.github.io/pages/games/haha.html</loc>
+  </url>
+  <url>
+    <loc>https://kingsiddhu.github.io/pages/gamepage.html</loc>
+  </url>
+  <url>
+    <loc>https://kingsiddhu.github.io/pages/games/play.html</loc>
+  </url>
+  <url>
+    <loc>https://kingsiddhu.github.io/pages/games/conway.html</loc>
+  </url>
+  <url>
+    <loc>https://kingsiddhu.github.io/pages/games/chess.html</loc>
   </url>
 </urlset>
