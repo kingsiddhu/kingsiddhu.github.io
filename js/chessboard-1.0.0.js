@@ -1,9 +1,4 @@
-// chessboard.js v1.0.0
-// https://github.com/oakmac/chessboardjs/
-//
-// Copyright (c) 2019, Chris Oakman
-// Released under the MIT license
-// https://github.com/oakmac/chessboardjs/blob/master/LICENSE.md
+
 
 // start anonymous scope
 ;(function () {
