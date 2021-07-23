@@ -4,7 +4,10 @@ body{ font-family: 'B612', sans-serif; }
 /* Style the header */
 .header {
   padding: 10px 16px;
-  background: #eb0909;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
 }
 
 /* Page content */
