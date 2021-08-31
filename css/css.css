@@ -153,3 +153,9 @@ body{ font-family: 'B612', sans-serif; }
         color: pink;
       }
     }
+
+
+
+.search-container {
+    float: none;
+  }
