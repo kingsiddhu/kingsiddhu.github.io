@@ -1,0 +1,17 @@
+{
+    "short_name": "KS",
+    "name": "KingSiddhu",
+    "description": "Site made as a hobby",
+    "icons": [
+      {
+        "src": "/img/logo.jpeg",
+        "type": "image/png",
+        "sizes": "225x225"
+      }
+    ],
+    "start_url": "/",
+    "background_color": "#111111",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#000000"
+}
