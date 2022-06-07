@@ -14,10 +14,6 @@
      crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./css/css.css">
   <script>
-   document.getElementById('go-forward').addEventListener('click', e => {window.history.forward();})
-   document.getElementById('go-back').addEventListener('click', e => {window.history.back();})
-  </script>
-  <script>
 window.onscroll = function() {myFunction()};
 
 var header = document.getElementById("myHeader");
@@ -33,15 +29,17 @@ function myFunction() {
   </head> 
  
   <body>
-   <div class="header" id="myHeader" >
-     <a id="iconhome" onclick="window.history.back()"> < </a>
+   <header class="header" id="myHeader" >
+     <a id="iconhome" onclick="window.history.back()" style="align: left"> < </a>
      <a id="backiconhome" onclick="window.history.forward()"> > </a>
-     <a href="https://kingsiddhu.github.io"><img src="./img/logo.jpeg"  width="50px" height="50px"></a>
-     <a href="https://www.youtube.com/channel/UCm-Tcpc9zDONytmwS1Y91-Q?sub_confirmation=1" style="color: white">Channel</a>
-     <a href="/pages/blogs-page" style="color: white">Blogs</a>
-    <a href="/pages/games-platform-selection.html" style="color: white">GAMES</a>
-     <br>
-    </div>
+     <a id="reload" onclick="javascript:window.location.reload(true)">   </a>
+      
+      
+     <a href="https://www.youtube.com/channel/UCm-Tcpc9zDONytmwS1Y91-Q?sub_confirmation=1" style="color: white" style="align: center">Channel</a>
+     <a href="/pages/blogs-page" style="color: white; align: center">Blogs</a>
+     <a href="/pages/games-platform-selection.html" style="color: white; align:center">GAMES</a>
+     <a href="https://kingsiddhu.github.io"  style="align-items: left"><img src="./img/logo.jpeg"  width="50px" height="50px"></a>
+    </header>
    <div id="begin" style="text-align:center">
     <h1>WELCOME</h1>
     <h2>to</h2>
