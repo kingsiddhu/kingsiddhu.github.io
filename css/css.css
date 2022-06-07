@@ -1,13 +1,19 @@
-body{ font-family: 'B612', sans-serif; }
+body{
+  font-family: 'B612', sans-serif; 
+  margin: 0px;
+  padding: 0px;
+}
 
 
 /* Style the header */
 .header {
   padding: 10px 16px;
-  text-align: center;
   background: #4ABC45;
   color: white;
   font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Page content */
@@ -19,12 +25,12 @@ body{ font-family: 'B612', sans-serif; }
 .sticky {
   position: fixed;
   top: 0;
-  width: 100%
+  width: 100%;
 }
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
 .sticky + .content {
-  padding-top: 102px;
+  padding-top: 100px;
 }
 
 
