@@ -164,3 +164,7 @@ body{
 .search-container {
     float: none;
   }
+
+.nav:hover {
+  color: black;
+    }
