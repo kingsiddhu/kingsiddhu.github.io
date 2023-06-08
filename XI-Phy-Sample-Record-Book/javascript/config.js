@@ -30,7 +30,7 @@ var bookConfig = {
     "printWatermarkFile": "",
     "BookMarkButtonVisible": "Show",
     "BackgroundSoundButtonVisible": "Hide",
-    "BackgroundSoundURL": "vine-boom.mp3",
+    "BackgroundSoundURL": "/vine-boom.mp3",
     "BackgroundSoundLoop": 1,
     "HelpButtonVisible": "Hide",
     "helpContentFileURL": "",
