@@ -30,7 +30,7 @@ var bookConfig = {
     "printWatermarkFile": "",
     "BookMarkButtonVisible": "Show",
     "BackgroundSoundButtonVisible": "Show",
-    "BackgroundSoundURL": "files/lukrembo-bread_LASsYFKc.mp3",
+    "BackgroundSoundURL": "https://kingsiddhu.github.io/XI-Phy-Sample-Record-Book/files/lukrembo-bread_LASsYFKc.mp3",
     //"BackgroundSoundURL": "",
     "BackgroundSoundLoop": -1,
     "HelpButtonVisible": "True",
