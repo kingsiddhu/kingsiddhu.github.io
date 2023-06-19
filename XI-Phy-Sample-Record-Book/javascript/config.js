@@ -189,8 +189,6 @@ var bookConfig = {
     {"l":"files/large/38.jpg","t":"files/thumb/8.jpg"},
     {"l":"files/large/39.jpg","t":"files/thumb/8.jpg"},
     {"l":"files/large/40.jpg","t":"files/thumb/8.jpg"},
-    {"l":"files/large/41.jpg","t":"files/thumb/8.jpg"},
-    {"l":"files/large/42.jpg","t":"files/thumb/8.jpg"},
     {"l":"files/large/43.jpg","t":"files/thumb/8.jpg"},
     {"l":"files/large/44.jpg","t":"files/thumb/8.jpg"},
     {"l":"files/large/45.jpg","t":"files/thumb/8.jpg"},
