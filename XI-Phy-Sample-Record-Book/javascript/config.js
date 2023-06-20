@@ -85,7 +85,7 @@ var bookConfig = {
     "AboutMobile": "",
     "AboutWebsite": "",
     "AboutDescription": "",
-    "totalPageCount": 82,
+    "totalPageCount": 84,
     "largePageWidth": 603,
     "largePageHeight": 783,
     "normalPath": "files\/large\/",
