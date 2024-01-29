@@ -5,39 +5,6 @@ body{
 }
 
 
-/* Style the header */
-.header {
-  padding: 10px 16px;
-  background: #4ABC45;
-  color: white;
-  font-size: 30px;
-  display: flex;
-  justify-content: center;
-}
-
-/* Page content */
-.content {
-  padding: 16px;
-}
-
-/* The sticky class is added to the header with JS when it reaches its scroll position */
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
-  padding-top: 100px;
-}
-
-
-.peepeepoopoo {
-  margin-left: 30px;
-  }
-
-
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -159,12 +126,106 @@ body{
       }
     }
 
+.block20{
+  width: 100%;
+  height: 20vh;
+
+}
+.block40{
+  width: 100%;
+  height: 40vh;
+
+}
+.block50{
+  width: 100%;
+  height: 50vh;
+
+}
+.block75{
+  width: 100%;
+  height: 75vh;
+
+}
+.block100{
+  width: 100%;
+  height: 100vh;
+
+}
+.hidden{
+  animation: none 1s;
+  display: none;
+}
 
 
-.search-container {
-    float: none;
+.profile{
+  border-radius: 150px;
+  background: none;
+  box-shadow: inset 8px 8px 16px #5a5a5a,
+              inset -8px -8px 16px #ffffff;
+  height: 30vh;
+  z-index: 0;
+  width:30vh;
+}
+
+footer{
+  text-align: center;
+  border-radius: 200px;
+  padding:5px;
+  background-attachment: scroll;
+  background-position: 0% 0%;
+  background-color: rgba(0, 0, 0, 0.527);
+  color: white;
+  position: fixed;
+  bottom: 5px;
+  right:5px
+}
+
+.rectangle{
+  position: absolute;
+  height: 20vh;
+  width: 1500px;
+  background-color: #005FE7;
+  rotate: -45deg;
+  animation: swing1 10s linear infinite ;
+  
+}
+@keyframes swing1{
+    0%{
+      transform: rotate(-5deg);
+    }
+    50%{
+      transform: rotate(5deg)
+    }
+    100%{
+      transform: rotate(-5deg);
+    }
   }
 
-.nav:hover {
-  color: black;
-    }
+@keyframes appear {
+  from {opacity:0}
+  to {opacity:1}
+}
+@keyframes disappear {
+  from {opacity:1}
+  to {opacity:0;}
+}
+p{
+  font-size: 1.3rem;
+}
+h2{
+  font-size: 1.5rem;
+}
+.section{
+  padding: 0px
+}
+
+#real{
+  background-color: #1f1f1f;
+}
+.foot{
+  text-align: center;
+  background-color: #005FE7;
+  height: 30vh;
+  width:100%;
+  color:white
+}
