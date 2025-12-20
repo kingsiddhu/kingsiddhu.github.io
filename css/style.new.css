@@ -1,15 +1,24 @@
-body {
-  margin: 0;
-  font-size: 28px;
-  font-family: Arial, Helvetica, sans-serif;
+html {
+  font-size: 1rem;
 }
 
+body {
+  margin: 0;
+  background-color: hsl(5, 15%, 5%);
+  color: #fff;
+  /*font-size: clamp(1.2rem, 5vw, 1.5rem);*/
+  line-height: 1.6;
+	min-height: 100vh;
+	/*font-family:  "Geist Sans", "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui;
+	font-weight: 70;*/
+}
 
 header {
   width: 100%;
-  height: 80vh;
+  height: clamp(10vh,70vw, 70vh);
   background-color: #4ABC45;
   text-align: center;
+  place-items: center;
   position: relative;
   top: 0;
   z-index: 2;
@@ -27,6 +36,7 @@ header {
 }
 
 #navbar {
+  text-align: center;
   position: sticky;
   top: 0;
   overflow: hidden;
@@ -70,37 +80,17 @@ header nav a {
   text-decoration: none;
 }
 
-.wrapper {
-  width: 75vw;
-  margin: 0 auto;
-}
-
-section {
-  padding: 20px;
-  margin-bottom: 40px;
-  background-color: #fff;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
-}
-
 /*Typography*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-
+/*
 :root {
   --headline-color: white;
   --text-color: rgba(255, 255, 255, 0.5);
 }
-
-.canvas {
-  z-index: 2;
-}
+*/
 
 .headline-container{
   display: flex;
@@ -118,7 +108,7 @@ section {
   font-family: 'Roboto', sans-serif;
   position: absolute;
   text-align: center;
-  font-size: clamp(24px, 20vw, 200px);
+  font-size: clamp(24px, 10vw, 200px);
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 10px;
@@ -140,6 +130,179 @@ section {
 #text-front {
   /*  Set text-color to transparent to only show the outline  */
   color: transparent;
-  -webkit-text-stroke: 2px var(--headline-color);
+  -webkit-text-stroke: 2px;
+  -webkit-text-stroke-color: #fff;
   z-index: 3;
+}
+
+.canvas {
+  z-index: 2;
+}
+section {
+  margin-top: 40px ;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  color: #000;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.wrapper {
+  width: 75vw;
+  margin: 0 auto;
+}
+
+#prof {
+  display: inline-flex;
+}
+
+.itemflex {
+  padding: 20px;
+  width:fit-content;
+  place-content: center;
+}
+
+.project{
+  text-align: center;
+  height:70vh;
+}
+
+@media (max-aspect-ratio : 1/1) {
+  .wrapper {
+    width: 100vw;
+  }
+  #prof {
+    display: block;
+  }
+}
+
+
+
+.container {
+	--spread: 60;
+	display: flex;
+	flex-wrap: wrap;
+  flex-direction: var(--direction);
+	gap: calc(var(--gap) * 1px);
+	margin: 0 auto;
+	justify-content: center;
+	place-items: center;
+	position: relative;
+	padding: 2rem;
+  touch-action: none;
+}
+
+.article {
+	--active: 0.15;
+	--start: 0;
+	height: 100%;
+	background: var(--card);
+	padding: 0rem;
+	aspect-ratio: 16 / 9;
+	border-radius: var(--border-radius);
+	min-width: 480px;
+	max-width: 380px;
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+	position: relative;
+  color: white
+}
+
+.article:is(:hover, :focus-visible) {
+  z-index: 2;
+}
+
+.glows {
+	pointer-events: none;
+	position: absolute;
+	inset: 0;
+	filter: blur(calc(var(--blur) * 1px));
+}
+
+.glows::after,
+.glows::before {
+  --alpha: 0;
+  content: "";
+  background: var(--gradient);
+  background-attachment: fixed;
+  position: absolute;
+	inset: -5px;
+  border: 10px solid transparent;
+  border-radius: var(--border-radius);
+  -webkit-mask:
+  	linear-gradient(#0000, #0000),
+  	conic-gradient(from calc((var(--start) - (var(--spread) * 0.5)) * 1deg), #000 0deg, #fff, #0000 calc(var(--spread) * 1deg));
+          mask:
+  	linear-gradient(#0000, #0000),
+  	conic-gradient(from calc((var(--start) - (var(--spread) * 0.5)) * 1deg), #000 0deg, #fff, #0000 calc(var(--spread) * 1deg));
+  -webkit-mask-composite: source-in, xor;
+          mask-composite: intersect;
+  -webkit-mask-clip: padding-box, border-box;
+          mask-clip: padding-box, border-box;
+  opacity: var(--active);
+  transition: opacity 1s;
+}
+
+.article::before {
+	position: absolute;
+	inset: 0;
+	border: var(--border-width) solid transparent;
+	content: "";
+	border-radius: var(--border-radius);
+	pointer-events: none;
+	background: var(--border);
+  background-attachment: fixed;
+  border-radius: var(--border-radius);
+  -webkit-mask:
+  	linear-gradient(#0000, #0000),
+  	conic-gradient(
+  		from calc(((var(--start) + (var(--spread) * 0.25)) - (var(--spread) * 1.5)) * 1deg),
+  		hsl(0 0% 100% / 0.15) 0deg,
+  		white,
+  		hsl(0 0% 100% / 0.15) calc(var(--spread) * 2.5deg));
+          mask:
+  	linear-gradient(#0000, #0000),
+  	conic-gradient(
+  		from calc(((var(--start) + (var(--spread) * 0.25)) - (var(--spread) * 1.5)) * 1deg),
+  		hsl(0 0% 100% / 0.15) 0deg,
+  		white,
+  		hsl(0 0% 100% / 0.15) calc(var(--spread) * 2.5deg));
+  -webkit-mask-clip: padding-box, border-box;
+          mask-clip: padding-box, border-box;
+  -webkit-mask-composite: source-in, xor;
+          mask-composite: intersect;
+  opacity: var(--active);
+  transition: opacity 1s;
+}
+
+.article::after {
+	--bg-size: 100%;
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  background: var(--gradient);
+  background-attachment: fixed;
+  border-radius: var(--border-radius);
+  opacity: var(--active, 0);
+  transition: opacity 1s; 
+  --alpha: 0;
+  inset: 0;
+  border: var(--border-width) solid transparent;
+  -webkit-mask:
+  	linear-gradient(#0000, #0000),
+  	conic-gradient(from calc(((var(--start) + (var(--spread) * 0.25)) - (var(--spread) * 0.5)) * 1deg), #0000 0deg, #fff, #0000 calc(var(--spread) * 0.5deg));
+          mask:
+  	linear-gradient(#0000, #0000),
+  	conic-gradient(from calc(((var(--start) + (var(--spread) * 0.25)) - (var(--spread) * 0.5)) * 1deg), #0000 0deg, #fff, #0000 calc(var(--spread) * 0.5deg));
+  filter: brightness(1.5);
+  -webkit-mask-clip: padding-box, border-box;
+          mask-clip: padding-box, border-box;
+  -webkit-mask-composite: source-in, xor;
+          mask-composite: intersect;
 }

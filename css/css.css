@@ -209,11 +209,11 @@ footer{
   from {opacity:1}
   to {opacity:0;}
 }
-p{
-  font-size: 1.3rem;
+p, a{
+  font-size:1.5rem;
 }
 h2{
-  font-size: 1.5rem;
+  font-size: 5rem;
 }
 .section{
   padding: 0px
@@ -224,8 +224,13 @@ h2{
 }
 .foot{
   text-align: center;
+  place-content: center;
   background-color: #005FE7;
-  height: 30vh;
+  height: 40vh;
   width:100%;
   color:white
+}
+.foot a {
+  padding: 30px;
+  color: #fff;
 }
