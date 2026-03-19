@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap");
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0e0e0f;
+  --surface: #161618;
+  --border: #2a2a2e;
+  --accent: #c9a96e;
+  --text: #f0ede8;
+  --muted: #8a8680;
+  --radius: 16px;
+}
+
+
+
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  animation: fadeUp 0.6s ease both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Card — NO overflow:hidden on the card itself */
+.carousel {
+  flex: 1;
+  width: 63vw;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.carousel::before {
+  content: '';
+  display: block;
+  height: 3px;
+  border-radius: var(--radius) var(--radius) 0 0;
+  /*background: linear-gradient(90deg, transparent, var(--accent), transparent);*/
+}
+
+.carousel h1 {
+  text-align: center;
+}
+
+/* ─── Track pattern ───────────────────────────────────────────
+   .track-clip  → clips to exactly its own width (overflow:hidden)
+   .track-strip → flex row that slides via translateX px
+   .track-strip > * → flex: 0 0 100%; width:100% of the clip box
+──────────────────────────────────────────────────────────────── */
+.track-clip {
+  overflow: hidden;
+  /* width set per context */
+}
+.track-strip {
+  display: flex;
+  will-change: transform;
+  transition: transform 0.52s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.track-strip > * {
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 0;
+}
+
+/* ── Title ── */
+.title-section {
+  padding: 2px 36px 0;
+}
+.title-section .track-clip { width: 100%; }
+
+.title-slide {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.4rem, 3.2vw, 4rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+.title-slide em { font-style: italic; color: var(--accent); }
+
+/* ── Divider ── */
+.divider {
+  margin: 18px 0px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--accent), var(--border) 55%, transparent);
+}
+
+/* ── Chips ── */
+.track-labels {
+  display: flex;
+  gap: 8px;
+  padding: 0 36px 14px;
+  flex-wrap: wrap;
+}
+.chip {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  background: transparent;
+}
+.chip:hover { border-color: var(--accent); color: var(--accent); }
+.chip.locked { border-color: var(--accent); color: var(--accent); background: rgba(201,169,110,0.08); }
+
+/* ── Content row ── */
+.content-row {
+  display: flex;
+  align-items: flex-start;
+  padding: 0 36px 28px;
+  gap: 24px;
+}
+
+/* Body column */
+.body-col {
+  flex: 1;
+  min-width: 0; /* critical — lets flex child shrink */
+}
+.body-col .track-clip { width: 100%; }
+
+.body-slide {
+  font-size: 1.2rem;
+  width: auto;
+  line-height: 1.75;
+  color: #bfbbb5;
+  font-weight: 300;
+}
+
+/* Image column */
+.image-col {
+  width: 40%;
+}
+.image-col .track-clip {
+  width: 100%;
+  border-radius: 10px;
+}
+.image-slide {
+  width: 100%;
+  height: 210px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+@media (max-aspect-ratio : 1/1) {
+  
+  .content-row {
+    display: grid;
+  }
+  .image-col{
+    width: 100%;
+    nav-index: 0;
+    grid-row: 1;
+  }
+  .image-slide{
+    height: 40vh;
+  }
+  .body-col{
+    grid-row: 2;
+  }
+}
+.image-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.82) brightness(0.88);
+  transition: filter 0.4s;
+}
+.image-slide:hover img { filter: saturate(1) brightness(1); }
+.image-slide::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: 10px; left: 10px;
+  background: rgba(14,14,15,0.72);
+  backdrop-filter: blur(4px);
+  color: var(--accent);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 4px;
+  border: 1px solid rgba(201,169,110,0.28);
+}
+
+/* ── Footer ── */
+.carousel-footer {
+  padding: 0 36px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.indicators { display: flex; gap: 8px; align-items: center; }
+.dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--border);
+  border: none; padding: 0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.dot.active { background: var(--accent); width: 22px; border-radius: 3px; }
+.counter {
+  font-size: 0.76rem;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  font-weight: 500;
+}
+
+/* ── Nav buttons ── */
+.nav-btn {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--accent);
+  cursor: pointer;
+  display:flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.22s;
+}
+.nav-btn:hover {
+  background: var(--accent); color: var(--bg);
+  border-color: var(--accent);
+  transform: scale(1.08);
+  box-shadow: 0 0 18px rgba(201,169,110,0.22);
+}
+.nav-btn:active { transform: scale(0.96); }
+.nav-btn svg { width: 18px; height: 18px; pointer-events: none; }

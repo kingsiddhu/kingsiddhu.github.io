@@ -170,7 +170,7 @@ body{
 footer{
   text-align: center;
   border-radius: 200px;
-  padding:5px;
+  padding:5px 10px 5px 10px;
   background-attachment: scroll;
   background-position: 0% 0%;
   background-color: rgba(0, 0, 0, 0.527);
@@ -210,7 +210,7 @@ footer{
   to {opacity:0;}
 }
 p, a{
-  font-size:1.5rem;
+  font-size:2.5vh;
 }
 h2{
   font-size: 5rem;
@@ -221,16 +221,4 @@ h2{
 
 #real{
   background-color: #1f1f1f;
-}
-.foot{
-  text-align: center;
-  place-content: center;
-  background-color: #005FE7;
-  height: 40vh;
-  width:100%;
-  color:white
-}
-.foot a {
-  padding: 30px;
-  color: #fff;
 }

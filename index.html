@@ -18,26 +18,29 @@
       <link rel="manifest" href="/manifest.json">
 
 
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
       <link rel="stylesheet" href="./css/style.new.css">
       <link rel="stylesheet" href="./css/css.css">
+      <link rel="stylesheet" href="./css/custom_carousel.css">
    </head>
    <body>
 
       <header class="header">
+         
          <div class="headline-container">
+            <video autoplay muted loop playsinline id="bg-video" src="/vid/10130349-hd_1920_1080_30fps.mp4"></video>
             <div id="text-behind">SIDDHARTH KATABATHULA</div>
             <div id="text-behind-blur">SIDDHARTH KATABATHULA</div>
             <div id="text-front">SIDDHARTH KATABATHULA</div>
-            <div class="rectangle canvas" style="left: 400px"></div>
-            <div class="rectangle canvas" style="left: -400px"></div>
+
             <img class="canvas" src="/img/logo.svg" style="height: auto; width: 30vw;"></img>
          </div>
       </header>
       <nav id="navbar">
-         <a href="https://www.youtube.com/channel/UCm-Tcpc9zDONytmwS1Y91-Q?sub_confirmation=1" target="_blank">Channel</a>
+         <a href="https://www.youtube.com/@KingStudiosYT?sub_confirmation=1" target="_blank">Channel</a>
          <a href="/pages/blogs-page">Blogs</a>
          <!--a href="">Gallery</a-->
          <a href="">Projects</a>
@@ -46,122 +49,218 @@
       <!--div class="block20"></div-->
       <div class="wrapper">
          <section id='prof'>
-            <div class="itemflex">
-                  <h1>Hi, I am Siddharth Katabathula</h1>
+            <h1 class="title-wrapper">ABOUT ME</h1>
+            <div class="divider" style="background: #000;"></div>
+            <div class="flexbox">
+               <div class="itemflex">
+                  <h1>Hi, I am <text-type class="typing-text"></text-type><span class="typed-cursor" aria-hidden="true"></span></h1>
                <!--div style="display: grid;">
                   <img src="/img/low_Crown_Roughness.png" style="height: 30vh;border-radius: 100vh; place-self: center;">
                   <div class="profile" style="position: absolute; place-self: center;"></div>
                </div--->
-            </div>
-            <div class="itemflex">
-               <h1>About me</h1>
-               <p>Hey there! 🌟 I'm a teen programmer, animator, gamer, YouTuber, and an aspiring Game Developer. 🎮🎥 Join me on my journey as I create awesome animations, share gaming clips, and document my coding journey.</p>
-               <p>This is the go to place for the ultimate entertainment, More content is in the planning</p>
+               </div>
+               <div class="itemflex">
+                  <p>I build interactive systems across game development, AI, and cybersecurity.
+From gameplay mechanics to intelligent agents and low-level systems,
+I like solving complex problems and turning ideas into working software.</p>
+                  <p>This is the go to place for the ultimate entertainment, More content is in the planning</p>
+               </div>
             </div>
             
+            
          </section>
-         
-         <section id='real'>
-            <h1 style="color:white">Youtube</h1>
-            <div class="container">
-            <div class="article">
-               <div class="glows"></div>
-               <iframe style="padding:.5rem"  class="article" width="90%" height="90%" src="https://www.youtube.com/embed/8Y_0uUfta48" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-         
+         <section id="skills">
+            <h1 class="title-wrapper">SKILLS I KNOW</h1>
+            <div class="divider" style="background: #000;"></div>
+            <!--h3>Im built different. Trust.</h3-->
+            <div class="skillbox">
+               <p><i class="fa-brands fa-html5"></i> HTML</p>
+               <p><i class="fa-brands fa-css3-alt"></i> CSS</p>
+               <p><i class="fa-brands fa-js"></i> JAVASCRIPT</p>
+               <p>GODOT</p>
+               <p><i class="fa-brands fa-python"></i> PYTHON</p>
+               <p>C++</p>
+               <p><i class="fa-brands fa-sass"></i> SASS</p>
+               <p><i class="fa-solid fa-database"></i> MONGODB</p>
+               <p><i class="fa-solid fa-database"></i> MYSQL</p>
+               <p><i class="fa-brands fa-git-alt"></i> GIT</p>
+               <p><i class="fa-brands fa-github"></i> GITHUB</p>
+               <p><i class="fa-brands fa-npm"></i> NPM</p>
+               <p><i class="fa-brands fa-square-github"></i> GITHUB PAGES</p>
+               <p><i class="fa-solid fa-caret-up"></i> VERCEL</p>
+               <p><svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M320.7 56.2C296.6 115.2 282.1 153.9 255.3 211.2C271.7 228.6 291.9 248.8 324.7 271.7C289.5 257.2 265.5 242.8 247.5 227.7C213.2 299.3 159.4 401.2 50.3 597.1C136 547.6 202.5 517.1 264.4 505.5C261.7 494.1 260.3 481.7 260.4 468.8L260.5 466.1C261.9 411.2 290.4 368.9 324.3 371.7C358.2 374.5 384.5 421.5 383.1 476.4C382.8 486.7 381.7 496.6 379.7 505.8C440.9 517.8 506.7 548.2 591.3 597C574.6 566.3 559.7 538.7 545.5 512.3C523.1 494.9 499.8 472.4 452.2 447.9C484.9 456.4 508.5 466.2 526.7 477.2C382.2 208.1 370.5 172.4 320.9 56.1z"/></svg> I use Arch btw</p>
+               <p><i class="fa-brands fa-aws"></i> AWS</p>
+               <p><i class="fa-brands fa-docker"></i> DOCKER</p>
+               <p><i class="fa-brands fa-ubuntu"></i> UBUNTU</p>
+               <p><i class="fa-brands fa-windows"></i> WINDOWS</p>
+               <p><i class="fa-brands fa-youtube"></i> YOUTUBE</p>
+               <p></p>
+               <p></p>
             </div>
-            <div class="article">
-               <div class="glows"></div>
-               <iframe style="padding:.5rem"  class="article" width="90%" height="90%" src="https://www.youtube.com/embed/8Y_0uUfta48" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            </div>
-      
+
          </section>
-         
-         <section id="projects">
-            <div id="Caroline" class="carousel slide" data-ride="carousel">
-               <!-- Indicators -->
-               <ol class="carousel-indicators">
-                  <li data-target="#Caroline" data-slide-to="0" class="active"></li>
-                  <li data-target="#Caroline" data-slide-to="1"></li>
-                  <li data-target="#Caroline" data-slide-to="2"></li>
-                  <li data-target="#Caroline" data-slide-to="3"></li>
-                  <li data-target="#Caroline" data-slide-to="4"></li>
-                  <li data-target="#Caroline" data-slide-to="5"></li>
-                  <li data-target="#Caroline" data-slide-to="6"></li>
-                  <li data-target="#Caroline" data-slide-to="7"></li>
-               </ol>
+         <div class="carousel-wrapper">
 
-               <!-- Wrapper for slides -->
-               <div class="carousel-inner">
-                  <div class="item active">
-                     <div class="project">
-                        <h1 style="position: relative;top: 55vh;">boids</h1>
-                     </div>
-                  </div>
+            <button class="nav-btn" id="prevBtn" aria-label="Previous">
+               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 18 9 12 15 6"/>
+               </svg>
+            </button>
+            <div class="carousel">
+            <h1 style="margin-top: 1.618vh;">Projects</h1>
+            <div class="divider" style="background: #fff; margin: 18px 36px;"></div>
 
-                  <div class="item">
-                     <div class="project">
-                        <h1 style="position: relative;top: 55vh;">AI CHATBOT</h1>
-                     </div>
+               <!-- TITLE TRACK -->
+               <div class="title-section">
+                  <div class="track-clip" id="titleClip">
+                  <div class="track-strip" id="titleTrack">
+                     <div class="title-slide">Boids</div>
+                     <div class="title-slide">AI Chatbot</div>
+                     <div class="title-slide">CTF Writeup</div>
+                     <div class="title-slide">HASS</div>
+                     <div class="title-slide">Project Marina</div>
+                     <div class="title-slide">Password manager</div>
+                     <div class="title-slide">EXPO</div>
+                     <div class="title-slide">Networking Demo</div>
+                     <div class="title-slide">Wrong Side</div>
+                     <div class="title-slide">The <em>Art</em> of Discovery</div>
+                     <div class="title-slide">Beyond the <em>Horizon</em></div>
+                     <div class="title-slide">Where <em>Ideas</em> Take Shape</div>
+                     <div class="title-slide">The <em>Quiet</em> Revolution</div>
                   </div>
-
-                  <div class="item">
-                     <div class="project">
-                        <h1 style="position: relative;top: 55vh;">HASS</h1>
-                     </div>
-                  </div>
-
-                  <div class="item">
-                     <div class="project">
-                        <h1 style="position: relative;top: 55vh;">networking Demo</h1>
-                     </div>
-                  </div>
-                  <div class="item">
-                     <div class="project">
-                        <h1 style="position: relative;top: 55vh;">EXPO</h1>
-                     </div>
-                  </div>
-                  <div class="item">
-                     <div class="project">
-                        <h1 style="position: relative;top: 55vh;">Password manager</h1>
-                     </div>
-                  </div>
-                  <div class="item">
-                     <div class="project">
-                        <h1 style="position: relative;top: 55vh;">Wrongside</h1>
-                     </div>
-                  </div>
-                  <div class="item">
-                     <div class="project">
-                        <h1 style="position: relative;top: 55vh;">ProjectMarina</h1>
-                     </div>
                   </div>
                </div>
 
-               <!-- Left and right controls -->
-               <a class="left carousel-control" href="#Caroline" data-slide="prev">
-                  <span class="glyphicon glyphicon-chevron-left"></span>
-                  <span class="sr-only">Previous</span>
-               </a>
-               <a class="right carousel-control" href="#Caroline" data-slide="next">
-                  <span class="glyphicon glyphicon-chevron-right"></span>
-                  <span class="sr-only">Next</span>
-               </a>
-            </div>
-         </section>
+               <div class="divider" style="margin: 18px 36px;"></div>
+
+               <!-- CHIPS -->
+               <div class="track-labels" style="display: none;">
+                  <button class="chip locked" data-track="all">Sync All</button>
+                  <button class="chip" data-track="title">Title Only</button>
+                  <button class="chip" data-track="body">Body Only</button>
+                  <button class="chip" data-track="image">Image Only</button>
+               </div>
+
+               <!-- BODY + IMAGE -->
+               <div class="content-row">
+
+                  <div class="body-col">
+                  <div class="track-clip" id="bodyClip">
+                     <div class="track-strip" id="bodyTrack">
+                        <div class="body-slide">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+                        <div class="body-slide">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+                        <div class="body-slide">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+                        <div class="body-slide">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+                        <div class="body-slide">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+                        <div class="body-slide">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+                        <div class="body-slide">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+                        <div class="body-slide">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+                        <div class="body-slide">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+                        <div class="body-slide">Every great journey begins not with a single step, but with the quiet willingness to see differently. Discovery is not reserved for the bold — it belongs to the curious, those who pause long enough to notice what others walk past.</div>
+                        <div class="body-slide">The furthest places are not always on a map. Sometimes the horizon lives inside a conversation, a half-finished thought, or a moment of stillness between two loud things. Learning to look is the real voyage.</div>
+                        <div class="body-slide">An idea doesn't announce itself. It arrives between tasks, in margins of notebooks, or in the half-awake hours before morning. The shape it takes depends entirely on the hands willing to hold it long enough.</div>
+                        <div class="body-slide">Change rarely arrives with fanfare. It gathers in small habits, quiet choices, and stubborn patience. The revolutions worth living through are the ones you barely notice — until one day the world looks entirely different.</div>
+                     </div>
+                  </div>
+                  </div>
+
+                  <div class="image-col">
+                  <div class="track-clip" id="imageClip">
+                     <div class="track-strip" id="imageTrack">
+                        <div class="image-slide" data-label="Vol. 01">
+                        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=480&q=80" alt="Discovery">
+                        </div>
+                        <div class="image-slide" data-label="Vol. 02">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=480&q=80" alt="Horizon">
+                        </div>
+                        <div class="image-slide" data-label="Vol. 03">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=480&q=80" alt="Ideas">
+                        </div>
+                        <div class="image-slide" data-label="Vol. 04">
+                        <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=480&q=80" alt="Revolution">
+                        </div>
+                        <div class="image-slide" data-label="Vol. 04">
+                        <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=480&q=80" alt="Revolution">
+                        </div>
+                        <div class="image-slide" data-label="Vol. 01">
+                        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=480&q=80" alt="Discovery">
+                        </div>
+                        <div class="image-slide" data-label="Vol. 02">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=480&q=80" alt="Horizon">
+                        </div>
+                        <div class="image-slide" data-label="Vol. 03">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=480&q=80" alt="Ideas">
+                        </div>
+                        <div class="image-slide" data-label="Vol. 04">
+                        <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=480&q=80" alt="Revolution">
+                        </div>
+                        <div class="image-slide" data-label="Vol. 01">
+                        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=480&q=80" alt="Discovery">
+                        </div>
+                        <div class="image-slide" data-label="Vol. 02">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=480&q=80" alt="Horizon">
+                        </div>
+                        <div class="image-slide" data-label="Vol. 03">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=480&q=80" alt="Ideas">
+                        </div>
+                        <div class="image-slide" data-label="Vol. 04">
+                        <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=480&q=80" alt="Revolution">
+                        </div>
+                     </div>
+                  </div>
+                  </div>
+
+               </div>
+
+               <!-- FOOTER -->
+               <div class="carousel-footer">
+                  <div class="indicators" id="indicators"></div>
+                  <span class="counter" id="counter">01 / 12</span>
+               </div>
+
+            </div><!-- /carousel -->
+
+            <button class="nav-btn" id="nextBtn" aria-label="Next">
+               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"/>
+               </svg>
+            </button>
+
+         </div>
+         
       </div>
       
       <div class="foot" id="foot">
 
-         <a>Instagram</a>
-         <a>Discord</a>
-         <a>𝕏(previously Twitter)</a>
+         <a href="mailto:siddharth.kata.dev@gmail.com" target="_blank" rel="noopener noreferrer">
+            <p><i class="fa-solid fa-envelope"></i> &nbsp; Mail</p></a>
+         <a href="https://www.linkedin.com/in/siddharth-katabathula/" target="_blank" rel="noopener noreferrer">
+            <p><i class="fa-brands fa-linkedin" target="_blank" rel="noopener noreferrer"></i> &nbsp; LinkedIn</p></a>
+         <a href="https://github.com/kingsiddhu" target="_blank" rel="noopener noreferrer">
+            <p><i class="fa-brands fa-github"></i> &nbsp; GitHub</p></a>
+         <a href="https://kingstudios.itch.io/" target="_blank" rel="noopener noreferrer">
+            <p><i class="fa-brands fa-itch-io"></i>&nbsp; Itch.io  </p></a>
+         <a href="https://www.instagram.com/_.siddhvrth._/" target="_blank" rel="noopener noreferrer">
+            <p><i class="fa-brands fa-instagram"></i> Instagram</p></a>
+         <a href="https://discord.gg/CDVadZe46F" target="_blank" rel="noopener noreferrer">
+            <p><i class="fa-brands fa-discord"></i> Discord</p></a>
+         <a href="" target="_blank" rel="noopener noreferrer">
+            <p><i class="fa-brands fa-x-twitter"></i> 𝕏(previously Twitter)</p></a>
+         <a href="https://www.youtube.com/@KingStudiosYT" target="_blank" rel="noopener noreferrer">
+            <p><i class="fa-brands fa-youtube"></i>&nbsp; Youtube  </p></a>
       </div>
-
-         <p style="font-size: medium;">Made my Siddharth Katabathula in January of 2024</p>
-      <div class="block" style="background-color: rgb(30, 30, 30);">
       <footer>Siddharth @2026</footer>
       
   <script type="module" src="./js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+      var typed = new Typed(".typing-text", {
+        strings: ["Siddharth Katabathula","into games, AI, and security","always learning, always building","an AI Builder","a Cybersecurity Specialist", "a Game Developer", "a Photographer", "an Animator", "a Designer"],
+        typeSpeed: 40,
+        backSpeed: 30,
+        loop: true
+      })
+    </script>
+    <script src="js/carousel.js"></script>
 </body>
 </html>
