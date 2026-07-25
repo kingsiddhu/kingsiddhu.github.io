@@ -1,4 +1,4 @@
-const TOTAL = 13;
+const TOTAL = 16;
 
 // Per-track state
 const state = { title: 0, body: 0, image: 0 };

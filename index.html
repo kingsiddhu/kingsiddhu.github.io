@@ -43,7 +43,7 @@
          <a href="https://www.youtube.com/@KingStudiosYT?sub_confirmation=1" target="_blank">Channel</a>
          <a href="/pages/blogs-page">Blogs</a>
          <!--a href="">Gallery</a-->
-         <a href="">Projects</a>
+         <a href="./#projects">Projects</a>
          <a href="./#footer">Contact</a>
       </nav>
       <!--div class="block20"></div-->
@@ -94,11 +94,19 @@ I like solving complex problems and turning ideas into working software.</p>
                <p><i class="fa-brands fa-ubuntu"></i> UBUNTU</p>
                <p><i class="fa-brands fa-windows"></i> WINDOWS</p>
                <p><i class="fa-brands fa-youtube"></i> YOUTUBE</p>
-               <p></p>
-               <p></p>
+               <p>TensorFlow</p>
+               <p>AI Agents</p>
+               <p>Vector Databases</p>
+               <p>Prompt Engineering</p>
+               <p>REST APIs</p>
+               <p>API Design</p>
+               <p>Uvicorn</p>
+               <p>Nginx</p>
+               <p>Gunicorn</p>
             </div>
 
          </section>
+         <div style="margin-top: min(-5.5vw, -5.5vh); height: max(5.5vw, 5.5vh); background-color: #818181; width: 100%; visibility: hidden;" id="projects"></div>
          <div class="carousel-wrapper">
 
             <button class="nav-btn" id="prevBtn" aria-label="Previous">
@@ -114,13 +122,16 @@ I like solving complex problems and turning ideas into working software.</p>
                <div class="title-section">
                   <div class="track-clip" id="titleClip">
                   <div class="track-strip" id="titleTrack">
+                     <div class="title-slide">Homelab Server</div>
+                     <div class="title-slide">AutoDraft</div>
+                     <div class="title-slide">Retro Dial</div>
+                     <div class="title-slide">AidCore</div>
                      <div class="title-slide">Boids</div>
-                     <div class="title-slide">AI Chatbot</div>
-                     <div class="title-slide">CTF Writeup</div>
+                     <div class="title-slide">QACA AI Chatbot</div>
+                     <div class="title-slide">Billify</div>
                      <div class="title-slide">HASS</div>
                      <div class="title-slide">Project Marina</div>
                      <div class="title-slide">Password manager</div>
-                     <div class="title-slide">EXPO</div>
                      <div class="title-slide">Networking Demo</div>
                      <div class="title-slide">Wrong Side</div>
                      <div class="title-slide">The <em>Art</em> of Discovery</div>
@@ -147,12 +158,15 @@ I like solving complex problems and turning ideas into working software.</p>
                   <div class="body-col">
                   <div class="track-clip" id="bodyClip">
                      <div class="track-strip" id="bodyTrack">
-                        <div class="body-slide">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
-                        <div class="body-slide">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
-                        <div class="body-slide">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
-                        <div class="body-slide">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
-                        <div class="body-slide">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
-                        <div class="body-slide">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+                        <div class="body-slide">My personal self-hosted cloud built from the ground up using Linux, Docker, and networking tools. This homelab runs my own services including DNS filtering, reverse proxying, game servers, remote access, automated printing, and LaTeX compilation. It is my playground for learning system administration, networking, cybersecurity, and infrastructure engineering.</div>
+                        <div class="body-slide">Ever had to fill out the same boring document over and over? AutoDraft is my attempt to fix that. It uses AI, web scraping, and LaTeX templates to automatically create polished documents like reports, applications, and forms. Give it a template and some information, and it does the tedious writing for you.</div>
+                        <div class="body-slide">A personal embedded systems project to build a modern take on the classic Walkman. Retro Dial combines an ESP32-S3, custom controls, audio playback, and a physical dial interface into a pocket-sized music player. Built from scratch to explore hardware design, communication protocols, and the joy of making unnecessary things the hard way.</div>
+                        <div class="body-slide">AIDCore is my attempt at building a personal AI assistant that can actually do things instead of just answer questions. Built with local LLMs and LangGraph, it can interact with files, control Spotify, execute custom tools, and be expanded with new capabilities. Basically, a small AI brain running on my own machine.</div>
+                        <div class="body-slide">A modular 3D flocking simulation built in Godot implementing the Boids algorithm for realistic autonomous movement. Features decentralized AI behaviors including separation, alignment, cohesion, and obstacle avoidance. Designed as a reusable framework with configurable resources and components for integrating intelligent agents into games, simulations, and interactive environments.</div>
+                        <div class="body-slide">A neural network trained cancer information chatbot designed to provide accessible health education through natural language conversations. The application combines conversational AI and voice responses to help users explore cancer-related topics, symptoms, treatments, and scientific explanations through an interactive and personalized experience.</div>
+                        <div class="body-slide">An AI-powered document analysis platform that simplifies complex bills by extracting information, explaining charges, identifying suspicious fees, and generating appeal letters. Billify uses a privacy-first architecture with local AI models for OCR and PII redaction before securely sending anonymized data to cloud models for deeper analysis.</div>
+                        <div class="body-slide">A full-stack platform that transforms YouTube Shorts into a distraction-free educational learning database. HASS builds a local searchable index of 1,800+ curated educational videos using automated data pipelines, AI-powered categorization, keyword extraction, and a FastAPI backend for instant content discovery.</div>
+                        <div class="body-slide">A 3D exploration adventure game developed by King Studios where players become underwater journalist Molly, discovering marine ecosystems, forgotten shipwrecks, and hidden ocean secrets. Combining exploration, photography-based gameplay, storytelling, and AI-assisted companionship, Project Marina delivers an immersive underwater experience focused on curiosity and discovery.</div>
                         <div class="body-slide">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
                         <div class="body-slide">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
                         <div class="body-slide">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
@@ -167,28 +181,28 @@ I like solving complex problems and turning ideas into working software.</p>
                   <div class="image-col">
                   <div class="track-clip" id="imageClip">
                      <div class="track-strip" id="imageTrack">
-                        <div class="image-slide" data-label="Placeholder alt text 01">
+                        <div class="image-slide" data-label="The docker list">
                         <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=480&q=80" alt="Discovery">
                         </div>
-                        <div class="image-slide" data-label="Placeholder alt text 02">
+                        <div class="image-slide" data-label="Placeholder alt text 01">
                         <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=480&q=80" alt="Horizon">
                         </div>
-                        <div class="image-slide" data-label="Placeholder alt text 03">
+                        <div class="image-slide" data-label="Not yet made Target: Septembeer 2026">
                         <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=480&q=80" alt="Ideas">
                         </div>
-                        <div class="image-slide" data-label="Placeholder alt text 04">
+                        <div class="image-slide" data-label="Placeholder alt text 02">
                         <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=480&q=80" alt="Revolution">
                         </div>
-                        <div class="image-slide" data-label="Placeholder alt text 04">
+                        <div class="image-slide" data-label="Dashboard">
                         <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=480&q=80" alt="Revolution">
                         </div>
-                        <div class="image-slide" data-label="Placeholder alt text 01">
+                        <div class="image-slide" data-label="Billify">
                         <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=480&q=80" alt="Discovery">
                         </div>
-                        <div class="image-slide" data-label="Placeholder alt text 02">
+                        <div class="image-slide" data-label="HASS">
                         <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=480&q=80" alt="Horizon">
                         </div>
-                        <div class="image-slide" data-label="Placeholder alt text 03">
+                        <div class="image-slide" data-label="Project Marina">
                         <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=480&q=80" alt="Ideas">
                         </div>
                         <div class="image-slide" data-label="Placeholder alt text 04">
@@ -205,6 +219,15 @@ I like solving complex problems and turning ideas into working software.</p>
                         </div>
                         <div class="image-slide" data-label="Vol. 04">
                         <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=480&q=80" alt="Revolution">
+                        </div>
+                        <div class="image-slide" data-label="Vol. 01">
+                        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=480&q=80" alt="Discovery">
+                        </div>
+                        <div class="image-slide" data-label="Vol. 02">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=480&q=80" alt="Horizon">
+                        </div>
+                        <div class="image-slide" data-label="Vol. 03">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=480&q=80" alt="Ideas">
                         </div>
                      </div>
                   </div>
