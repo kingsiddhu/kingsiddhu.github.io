@@ -537,3 +537,33 @@ a {
   background: linear-gradient(90deg,transparent 0%, var(--border) 22.5%, var(--accent) 50%, var(--border) 77.5%, transparent);
   
 }
+/* Responsive corrections preserving the existing palette and layout. */
+#navbar { display: flex; justify-content: center; }
+#navbar a { flex: 1; max-width: 15rem; width: auto; font-size: clamp(.8rem, 1.5vw, 1.1rem); }
+.itemflex { min-width: 0; }
+footer { height: auto; min-height: 30vh; align-items: flex-start; gap: 1.5rem; }
+footer::before { background: linear-gradient(0deg, rgba(201,169,110,.08), transparent); }
+.col { min-width: 0; overflow-wrap: anywhere; }
+.col2 a, .col3 a { display: block; margin: .65rem 0; }
+.site-credit { text-align: center; padding: 1rem; color: #aaa; }
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+#prof, #footer, #projects { scroll-margin-top: 5rem; }
+.archive-list { padding-left: 1.25rem; }
+.archive-list li { margin: 1rem 0; }
+.archive-note { color: #bfbbb5; margin: 1rem 0; }
+@media (max-width: 700px) {
+ section { padding: 24px 18px; }
+ .itemflex { padding: 12px 0; }
+ footer { padding: 3rem 16px; margin-top: 4rem; align-items: stretch; }
+ .col { padding: 1.5rem; }
+ .skillbox { margin: 16px 0; gap: .6rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+ *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; }
+ #bg-video { display: none; }
+}
+@media (min-width: 701px) and (max-width: 1000px) {
+ footer { flex-wrap: wrap; }
+ .col1 { width: 100%; }
+ .col2, .col3 { width: calc(50% - 1rem); }
+}

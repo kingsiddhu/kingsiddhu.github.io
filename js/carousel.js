@@ -1,4 +1,4 @@
-const TOTAL = 16;
+const TOTAL = document.getElementById('titleTrack').children.length;
 
 // Per-track state
 const state = { title: 0, body: 0, image: 0 };
@@ -21,6 +21,7 @@ const dotsWrap = document.getElementById('indicators');
 // Build dots
 for (let i = 0; i < TOTAL; i++) {
   const d = document.createElement('button');
+  d.type = 'button';
   d.className = 'dot' + (i === 0 ? ' active' : '');
   d.setAttribute('aria-label', `Slide ${i + 1}`);
   d.addEventListener('click', () => goTo(i));
@@ -30,7 +31,7 @@ for (let i = 0; i < TOTAL; i++) {
 // Move a single track to index i using px (avoids % resolving on wrong element)
 function moveTo(name, i) {
   const idx = ((i % TOTAL) + TOTAL) % TOTAL;
-  
+
   state[name] = idx;
   const w = clips[name].getBoundingClientRect().width;   // width of the clipping box
   strips[name].style.transform = `translateX(${-idx * w}px)`;
@@ -52,7 +53,16 @@ function step(dir=1) {
 
 function updateUI() {
   const ref = state.title;
-  dotsWrap.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === ref));
+  dotsWrap.querySelectorAll('.dot').forEach((d, i) => {
+    d.classList.toggle('active', i === ref);
+    d.setAttribute('aria-current', String(i === ref));
+  });
+  Object.values(strips).forEach(strip => {
+    Array.from(strip.children).forEach((slide, i) => {
+      slide.setAttribute('aria-hidden', String(i !== ref));
+      slide.inert = i !== ref;
+    });
+  });
   counter.textContent = String(ref + 1).padStart(2, '0') + ' / ' + String(TOTAL).padStart(2, '0');
 }
 
@@ -70,7 +80,9 @@ document.querySelectorAll('.chip').forEach(chip => {
 });
 
 // Keyboard
-document.addEventListener('keydown', e => {
+document.querySelector('.carousel-wrapper').addEventListener('keydown', e => {
+  if (e.target.matches('input, textarea, select')) return;
+  if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') e.preventDefault();
   if (e.key === 'ArrowLeft')  step(-1);
   if (e.key === 'ArrowRight') step(1);
 });
@@ -89,4 +101,7 @@ window.addEventListener('resize', () => {
   }, 50);
 });
 
-let intervalID = setInterval(step, 10000); 
+updateUI();
+
+// Advance all project tracks together every five seconds.
+setInterval(() => step(1), 5000);
