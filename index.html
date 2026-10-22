@@ -28,8 +28,23 @@
       <link rel="stylesheet" href="./css/css.css">
       <link rel="stylesheet" href="./css/custom_carousel.css">
       <link rel="stylesheet" href="./css/fieldnotes.css">
+      <link rel="stylesheet" href="./css/navbar.css">
    </head>
    <body>
+      <nav id="navbar" aria-label="Main navigation">
+         <a class="nav-brand" href="./">Siddharth K</a>
+         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation menu" hidden>
+            <span></span><span></span><span></span>
+         </button>
+         <div class="nav-links" id="nav-links">
+            <a href="/pages/blogs-page.html">Blogs</a>
+            <a href="#projects">Projects</a>
+            <a href="#playground">Lab</a>
+            <a href="#hackathons">hackathons</a>
+            <a href="#footer">Contact</a>
+         </div>
+      </nav>
+      <script src="js/navbar.js"></script>
 
       <header class="header">
 
@@ -42,15 +57,6 @@
             <img alt="King Siddhu crown logo" class="canvas" src="/img/logo.svg" style="height: auto; width: 30vw;">
          </div>
       </header>
-      <nav id="navbar">
-         <a href="https://www.youtube.com/@KingStudiosYT?sub_confirmation=1" target="_blank" rel="noopener noreferrer">Channel</a>
-         <a href="/pages/blogs-page.html">Blogs</a>
-         <!--a href="">Gallery</a-->
-         <a href="./#projects">Projects</a>
-         <a href="#playground">Lab</a>
-         <a href="#hackathons">Hackathons</a>
-         <a href="./#footer">Contact</a>
-      </nav>
       <!--div class="block20"></div-->
       <div class="wrapper">
          <section id='prof'>
@@ -117,8 +123,7 @@ I like solving complex problems and turning ideas into working software.</p>
             </div>
 
          </section>
-         <div style="margin-top: min(-5.5vw, -5.5vh); height: max(5.5vw, 5.5vh); background-color: #818181; width: 100%; visibility: hidden;" id="projects"></div>
-         <div class="carousel-wrapper" role="region" aria-label="Projects carousel" tabindex="0">
+         <div id="projects" class="carousel-wrapper" role="region" aria-label="Projects carousel" tabindex="0">
 
             <button class="nav-btn" id="prevBtn" aria-label="Previous">
                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">

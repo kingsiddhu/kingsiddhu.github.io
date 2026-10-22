@@ -421,7 +421,8 @@ section {
 
 footer {
   margin-top: 20vh;
-  z-index: 500;
+  z-index: 0;
+  isolation: isolate;
   width: 100%;
   height: 30vh;
 
@@ -445,7 +446,8 @@ footer::before {
     rgba(0, 0, 0, 1) 50%,
     rgb(0, 0, 0)
   )*/
-  z-index: -7;
+  z-index: -1;
+  pointer-events: none;
 }
 
 .backdrop {
@@ -566,4 +568,50 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 2px s
  footer { flex-wrap: wrap; }
  .col1 { width: 100%; }
  .col2, .col3 { width: calc(50% - 1rem); }
+}
+
+/* Keep section rhythm independent of the carousel's global margin reset. */
+:root { --section-gap: clamp(1.5rem, 4vw, 3rem); }
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap);
+  padding-block: var(--section-gap);
+  position: relative;
+  z-index: 0;
+}
+.wrapper > section { margin: 0 16px; min-width: 0; }
+
+/* Local footer layers stay below the sticky navigation. */
+footer {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  height: auto;
+  min-height: 0;
+  margin-top: 0;
+  padding: clamp(1.5rem, 4vw, 3rem) max(16px, 4vw);
+  align-items: start;
+}
+footer .col { width: auto; padding: clamp(1rem, 2.5vw, 2rem); }
+footer .col1 { display: flex; gap: 1rem; }
+footer h1 { font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.25; }
+footer .col2, footer .col3 { display: grid; gap: .25rem; }
+footer .col2 a, footer .col3 a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  margin: 0;
+  padding-block: .5rem;
+}
+footer .social { flex-wrap: wrap; gap: .75rem; }
+footer .link { width: 48px; height: 48px; flex-shrink: 0; }
+@media (max-width: 1000px) {
+  footer { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  footer .col1 { grid-column: 1 / -1; }
+}
+@media (max-width: 700px) {
+  .wrapper { width: 100%; }
+  footer { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
+  footer .col1 { grid-column: auto; }
 }
