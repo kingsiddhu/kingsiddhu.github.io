@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Learn HTML: build your first page</title><link rel="stylesheet" href="/css/blog-posts.css"></head>
+<body><nav aria-label="Main navigation"><a href="/">Home</a><a href="new-posts.html">Blog posts</a></nav><main><article>
+<h1>Learn HTML: build your first page</h1><p class="date"><time datetime="2021-08-01">August 1, 2021</time></p>
+<p>I wanted to teach people how to make a website like this one. Here is a starting point: a text editor, a browser, and a little HTML.</p>
+<h2>What is HTML?</h2><p>HTML stands for HyperText Markup Language. It describes a page’s structure. Tags mark headings, paragraphs, links, images, and other content. CSS handles appearance, and JavaScript can add interactions.</p>
+<h2>Your first file</h2><p>Create a file named <code>index.html</code>, paste in this example, and open it in your browser. Make sure the filename ends in <code>.html</code> rather than <code>.txt</code>.</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+  &lt;title&gt;My first website&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello, world!&lt;/h1&gt;
+  &lt;p&gt;This is my first web page.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>The doctype identifies modern HTML. The <code>html</code> element contains the document. The <code>head</code> holds metadata and the browser-tab title; the <code>body</code> holds visible content.</p>
+<h2>Headings and paragraphs</h2><p>Use <code>h1</code> for the main heading, <code>h2</code> for sections, and <code>p</code> for paragraphs. Choose heading levels for structure. Most elements have opening and closing tags.</p>
+<pre><code>&lt;h2&gt;About me&lt;/h2&gt;
+&lt;p&gt;I enjoy building websites and games.&lt;/p&gt;</code></pre>
+<h2>Links and images</h2><p>Attributes add details inside an opening tag. A link’s <code>href</code> gives its destination. An image’s <code>src</code> gives its file location, and <code>alt</code> describes its meaning for people who cannot see it. The <code>img</code> element has no closing tag.</p>
+<pre><code>&lt;a href="https://example.com"&gt;Visit an example website&lt;/a&gt;
+&lt;img src="my-photo.jpg" alt="Me working on my first website"&gt;</code></pre>
+<p>Put <code>my-photo.jpg</code> in the same folder as your HTML file, or update the path to match your image.</p>
+<h2>Make a list</h2><p>Use <code>ul</code> for bullets or <code>ol</code> for numbers. Each item goes inside <code>li</code>.</p>
+<pre><code>&lt;ul&gt;
+  &lt;li&gt;Learn HTML&lt;/li&gt;
+  &lt;li&gt;Build a page&lt;/li&gt;
+  &lt;li&gt;Share it with a friend&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+<h2>Try it yourself</h2><p>Change the title, write a paragraph about yourself, add a link, and list three things you enjoy. Save and refresh your browser after each change. Close nested tags in the right order: <code>&lt;p&gt;&lt;strong&gt;Hello!&lt;/strong&gt;&lt;/p&gt;</code>.</p>
+<p>This lesson expands on my <a href="Learn-HTML.html">original HTML course announcement</a>.</p>
+</article></main></body></html>

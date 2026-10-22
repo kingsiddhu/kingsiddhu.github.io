@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="BearcatCTF 2026 write-up index: 35 challenges solved across crypto, forensics, reverse engineering, web, misc, and OSINT.">
+  <title>BearcatCTF 2026 write-ups | Siddharth Katabathula</title>
+  <link rel="stylesheet" href="/css/blog-posts.css">
+  <style>
+    .challenge-table { overflow-x: auto; margin-bottom: 2rem; }
+    .challenge-table table { min-width: 650px; }
+    td code { overflow-wrap: anywhere; }
+    caption { text-align: left; font-weight: bold; padding: 8px 12px; }
+  </style>
+</head>
+<body>
+<nav aria-label="Main navigation"><a href="/">Home</a><a href="new-posts.html">Blog posts</a></nav>
+<main><article>
+<h1>BearcatCTF 2026 write-ups</h1>
+<p>BearcatCTF 2026 was a pirate-themed Capture The Flag competition. This post collects the challenge write-ups, points, and flags from our competition notes.</p>
+<h2>Scoreboard</h2>
+<p><strong>35 challenges solved across 6 categories.</strong> The index below contains 36 challenge entries: Chatroom records a solved first room and an unsolved second room, while Port remains unsolved. A dash means the supplied notes do not list a point value.</p>
+<p>The full solutions live in the <a href="https://github.com/hax1ng/bearcatctf2026/tree/main">BearcatCTF 2026 write-up repository</a>. Each challenge name links to its write-up. Flags are included below, so expect spoilers.</p>
+<nav aria-label="Challenge categories"><a href="#crypto">Crypto</a><a href="#forensics">Forensics</a><a href="#rev">Reverse engineering</a><a href="#web">Web</a><a href="#misc">Misc</a><a href="#osint">OSINT</a></nav>
+<h2 id="crypto">Crypto</h2>
+<div class="challenge-table"><table><caption>9 challenge entries</caption><thead><tr><th scope="col">Challenge</th><th scope="col">Points</th><th scope="col">Flag / status</th></tr></thead><tbody>
+<tr><th scope="row"><a href="https://github.com/hax1ng/bearcatctf2026/tree/main/crypto/block-cipher-buccaneers/">Block Cipher Buccaneers</a></th><td>500</td><td><code>BCCTF{BLoCk_c1pH3r_Mod3}</code></td></tr>
+<tr><th scope="row"><a href="https://github.com/hax1ng/bearcatctf2026/tree/main/crypto/chatroom/">Chatroom</a></th><td>—</td><td>Room 1: solved / Room 2: unsolved</td></tr>
+<tr><th scope="row"><a href="https://github.com/hax1ng/bearcatctf2026/tree/main/crypto/crazy-curves/">Crazy Curves</a></th><td>492</td><td><code>BCCTF{y0U_sp1n_mE_r1gt_r0und}</code></td></tr>
+<tr><th scope="row"><a href="https://github.com/hax1ng/bearcatctf2026/tree/main/crypto/curvy-wurvy/">Curvy Wurvy</a></th><td>500</td><td><code>BCCTF{NOW_7h0s3_4r3_s0m3_curv35}</code></td></tr>
+<tr><th scope="row"><a href="https://github.com/hax1ng/bearcatctf2026/tree/main/crypto/kidds-crypto/">Kidd's Crypto</a></th><td>50</td><td><code>BCCTF{y0U_h4V3_g0T_70_b3_K1DD1n9_Me}</code></td></tr>
+<tr><th scope="row"><a href="https://github.com/hax1ng/bearcatctf2026/tree/main/crypto/message-in-a-bottle/">Message In A Bottle</a></th><td>—</td><td><code>BCCTF{la_buse_strikes_again!}</code></td></tr>
+<tr><th scope="row"><a href="https://github.com/hax1ng/bearcatctf2026/tree/main/crypto/pickme/">Pickme</a></th><td>500</td><td><code>BCCTF{R54_Br0K3n_C0nF1rm3d????}</code></td></tr>
+<tr><th scope="row"><a href="https://github.com/hax1ng/bearcatctf2026/tree/main/crypto/tropped/">Tropped</a></th><td>50</td><td><code>BCCTF{1_h4T3_M7_Tr0p93D_4Hh_CRyp705ysT3m}</code></td></tr>
+<tr><th scope="row"><a href="https://github.com/hax1ng/bearcatctf2026/tree/main/crypto/twisted-pair/">Twisted Pair</a></th><td>500</td><td><code>BCCTF{D0n7_g37_m3_Tw157eD}</code></td></tr>
+</tbody></table></div>
+<h2 id="forensics">Forensics</h2>
+<div class="challenge-table"><table><caption>7 challenge entries</caption><thead><tr><th scope="col">Challenge</th><th scope="col">Points</th><th scope="col">Flag</th></tr></thead><tbody>
+<tr><th scope="row"><a href="https://github.com/hax1ng/bearcatctf2026/tree/main/forensics/blackbeard/">Blackbeard</a></th><td>499</td><td><code>BCCTF{b1@ckp3@r1_10$t_1t$_tr3@$ur3}</code></td></tr>
+<tr><th scope="row"><a href="https://github.com/hax1ng/bearcatctf2026/tree/main/forensics/crew-ledger/">Crew Ledger</a></th><td>500</td><td><code>BCCTF{X_M4rk3Sss_th3_Sp0T}</code></td></tr>
+<tr><th scope="row"><a href="https://github.com/hax1ng/bearcatctf2026/tree/main/forensics/cursed-map/">Cursed Map</a></th><td>500</td><td><code>BCCTF{00H_1M_bR07l1_f33ls_S0_g0Od!}</code></td></tr>
+<tr><th scope="row"><a href="https://github.com/hax1ng/bearcatctf2026/tree/main/forensics/gone-forever/">Gone Forever</a></th><td>492</td><td><code>BCCTF{GonE_But_nOt_4GottEn}</code></td></tr>
+<tr><th scope="row"><a href="https://github.com/hax1ng/bearcatctf2026/tree/main/forensics/mysterious-transmission/">Mysterious Transmission</a></th><td>486</td><td><code>BCCTF{4mAt3uR_r4di0_ru135}</code></td></tr>
+<tr><th scope="row"><a href="https://github.com/hax1ng/bearcatctf2026/tree/main/forensics/pcapsized/">pCapsized</a></th><td>479</td><td><code>BCCTF{C0nS91cuoU5_cH4Nn31s_4M1r1T3?}</code></td></tr>
+<tr><th scope="row"><a href="https://github.com/hax1ng/bearcatctf2026/tree/main/forensics/poem-about-pirates/">Poem About Pirates</a></th><td>499</td><td><code>BCCTF{1gN0r3_4ll_PreV1OU5_1n57Ruc7iOns}</code></td></tr>
+</tbody></table></div>
+<h2 id="rev">Reverse engineering</h2>
+<div class="challenge-table"><table><caption>7 challenge entries</caption><thead><tr><th scope="col">Challenge</th><th scope="col">Points</th><th scope="col">Flag</th></tr></thead><tbody>
+<tr><th scope="row"><a href="https://github.com/hax1ng/bearcatctf2026/tree/main/rev/captain-morgan/">Captain Morgan</a></th><td>499</td><td><code>BCCTF{Y00_hO_Ho_anD_4_B07Tl3_oF_rUm}</code></td></tr>
+<tr><th scope="row"><a href="https://github.com/hax1ng/bearcatctf2026/tree/main/rev/missing-one-piece/">Missing One Piece</a></th><td>500</td><td><code>BCCTF{I_gU3S5_7hAt_Wh1t3BeArD_6uY_W45_TRu7h1n6!}</code></td></tr>
+<tr><th scope="row"><a href="https://github.com/hax1ng/bearcatctf2026/tree/main/rev/pirate/">Pirate</a></th><td>465</td><td><code>BCCTF{Pr3t7y_5UR3_1tS_C!!1!}</code></td></tr>
+<tr><th scope="row"><a href="https://github.com/hax1ng/bearcatctf2026/tree/main/rev/plank/">Plank</a></th><td>500</td><td><code>BCCTF{y0U_mUs7_w4lK_A_f1N3_L1n3}</code></td></tr>
+<tr><th scope="row"><a href="https://github.com/hax1ng/bearcatctf2026/tree/main/rev/pollys-key/">Polly's Key</a></th><td>500</td><td><code>BCCTF{Th3_P05h_9oLly61Ot_p4rr0t}</code></td></tr>
+<tr><th scope="row"><a href="https://github.com/hax1ng/bearcatctf2026/tree/main/rev/tomb/">Tomb</a></th><td>500</td><td><code>BCCTF{Buri3d_at_sea_Ent0m3d_amm0nG_th3_w4v3S}</code></td></tr>
+<tr><th scope="row"><a href="https://github.com/hax1ng/bearcatctf2026/tree/main/rev/treasure-hunt-4/">Treasure Hunt 4</a></th><td>479</td><td><code>BCCTF{5LiD1n6_W1nd0w5_B3_L1k3:1m_C0nvo1v1nG}</code></td></tr>
+</tbody></table></div>
+<h2 id="web">Web</h2>
+<div class="challenge-table"><table><caption>4 challenge entries</caption><thead><tr><th scope="col">Challenge</th><th scope="col">Points</th><th scope="col">Flag</th></tr></thead><tbody>
+<tr><th scope="row"><a href="https://github.com/hax1ng/bearcatctf2026/tree/main/web/dubious-doubloon/">Dubious Doubloon</a></th><td>500</td><td><code>BCCTF{Fl1p&amp;F1sH}</code></td></tr>
+<tr><th scope="row"><a href="https://github.com/hax1ng/bearcatctf2026/tree/main/web/quartermaster/">Quartermaster</a></th><td>500</td><td><code>BCCTF{N0_H0nor_AmonG_Th3vEs}</code></td></tr>
+<tr><th scope="row"><a href="https://github.com/hax1ng/bearcatctf2026/tree/main/web/sea-shells/">Sea Shells</a></th><td>500</td><td><code>BCCTF{R34c7_S3rv3r_C0mp0n3n7s_RCE_2025}</code></td></tr>
+<tr><th scope="row"><a href="https://github.com/hax1ng/bearcatctf2026/tree/main/web/treasure-hunt-5/">Treasure Hunt 5</a></th><td>492</td><td><code>BCCTF{$SAFECr4cK1N6_8r1nG5_M3_50_mUCh_J0Y!}</code></td></tr>
+</tbody></table></div>
+<h2 id="misc">Misc</h2>
+<div class="challenge-table"><table><caption>7 challenge entries</caption><thead><tr><th scope="col">Challenge</th><th scope="col">Points</th><th scope="col">Flag</th></tr></thead><tbody>
+<tr><th scope="row"><a href="https://github.com/hax1ng/bearcatctf2026/tree/main/misc/battleship/">Battleship</a></th><td>489</td><td><code>BCCTF{S0r7_0f_L1k3_SuD0ku}</code></td></tr>
+<tr><th scope="row"><a href="https://github.com/hax1ng/bearcatctf2026/tree/main/misc/browns-revenge/">Brown's Revenge</a></th><td>436</td><td><code>BCCTF{i_5pe11ed_de_brujin_wr0ng_7689472}</code></td></tr>
+<tr><th scope="row"><a href="https://github.com/hax1ng/bearcatctf2026/tree/main/misc/ghost-ship/">Ghost Ship</a></th><td>494</td><td><code>BCCTF{N0_moR3_H4un71n6!_N0_M0rE_Gh0575!}</code></td></tr>
+<tr><th scope="row"><a href="https://github.com/hax1ng/bearcatctf2026/tree/main/misc/png-polly-needs-grog/">PNG (Polly Needs Grog)</a></th><td>120</td><td><code>BCCTF{ARRRRRGB_1s_n34T!}</code></td></tr>
+<tr><th scope="row"><a href="https://github.com/hax1ng/bearcatctf2026/tree/main/misc/polly-th-parrott/">Polly th' Parrott</a></th><td>—</td><td><code>BCCTF{CrAK3rs_P31Z}</code></td></tr>
+<tr><th scope="row"><a href="https://github.com/hax1ng/bearcatctf2026/tree/main/misc/the-boy-is-quine/">The Boy is Quine</a></th><td>397</td><td><code>BCCTF{1t5_mY_t1m3_t0_sh1n3}</code></td></tr>
+<tr><th scope="row"><a href="https://github.com/hax1ng/bearcatctf2026/tree/main/misc/the-brig/">The Brig</a></th><td>494</td><td><code>BCCTF{1--1--1--1--111--111--1111_e1893d6cdf}</code></td></tr>
+</tbody></table></div>
+<h2 id="osint">OSINT</h2>
+<div class="challenge-table"><table><caption>2 challenge entries</caption><thead><tr><th scope="col">Challenge</th><th scope="col">Points</th><th scope="col">Flag / status</th></tr></thead><tbody>
+<tr><th scope="row"><a href="https://github.com/hax1ng/bearcatctf2026/tree/main/osint/bottle-is-the-message/">Bottle is the Message</a></th><td>460</td><td><code>BCCTF{Crenshaw}</code></td></tr>
+<tr><th scope="row"><a href="https://github.com/hax1ng/bearcatctf2026/tree/main/osint/port/">Port</a></th><td>—</td><td>Unsolved</td></tr>
+</tbody></table></div>
+<p class="source">Challenge names, points, flags, and solve status are reproduced from the supplied BearcatCTF 2026 notes. See the <a href="https://github.com/hax1ng/bearcatctf2026/tree/main">repository</a> for solution details.</p>
+</article></main>
+</body></html>
