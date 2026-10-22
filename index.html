@@ -263,33 +263,41 @@ I like solving complex problems and turning ideas into working software.</p>
          </section>
 
          <section id="homelab" class="field-section">
-            <div class="field-heading"><p class="eyebrow">03 / MY CORNER OF THE INTERNET</p><h2>Cloud, with two home addresses.</h2><p>My homelab spans the USA and Qatar, running everyday services, game servers, and virtual machines for learning.</p></div>
+            <div class="field-heading"><p class="eyebrow">03 / MY CORNER OF THE INTERNET</p><h2>Cloud, with two home addresses.</h2><p>A personal homelab across the USA and Qatar for self-hosted services, game servers, and hands-on learning.</p></div>
             <div class="homelab-layout">
-               <div class="lab-location">
-                  <p class="eyebrow">USA / TWO NODES</p>
-                  <article class="lab-node">
+               <div class="lab-map" role="group" aria-label="Choose a homelab server">
+                  <p class="map-entry">USA / TWO NODES</p>
+                  <button type="button" id="lab-node01" data-lab-target="lab-node01-detail" aria-controls="lab-node01-detail" aria-pressed="true">Node01 <span>DEBIAN</span></button>
+                  <div class="map-line" aria-hidden="true"></div>
+                  <button type="button" id="lab-node02" data-lab-target="lab-node02-detail" aria-controls="lab-node02-detail" aria-pressed="false">Node02 <span>PROXMOX</span></button>
+                  <div class="map-line" aria-hidden="true"></div>
+                  <p class="map-entry">QATAR / HOME</p>
+                  <button type="button" id="lab-qatar" data-lab-target="lab-qatar-detail" aria-controls="lab-qatar-detail" aria-pressed="false">Home server <span>ARCHLINUX</span></button>
+               </div>
+               <div class="lab-details" aria-live="polite">
+                  <article class="lab-node layer-detail" id="lab-node01-detail" aria-labelledby="lab-node01">
+                     <p class="eyebrow">USA / NODE01</p>
                      <h3>Node01 <span class="field-tag">DEBIAN</span></h3>
                      <ul class="lab-services">
-                        <li>Nginx</li>
+                        <li>Nginx reverse proxy</li>
                         <li>Docker containers
-                           <ul><li>Minecraft server</li><li>LaTeX compiler</li><li>Pi-hole</li><li>Stremio</li><li>Music server</li><li>Frigate</li></ul>
+                           <ul><li>Minecraft server</li><li>LaTeX compiler</li><li>Pi-hole DNS filtering</li><li>Personal music server</li><li>Frigate camera management</li></ul>
                         </li>
                         <li>Samba file server</li>
                      </ul>
                      <p class="lab-plan"><span class="field-tag">FUTURE PLAN</span> Host this website on Node01.</p>
                   </article>
-                  <article class="lab-node">
+                  <article class="lab-node layer-detail" id="lab-node02-detail" aria-labelledby="lab-node02">
+                     <p class="eyebrow">USA / NODE02</p>
                      <h3>Node02 <span class="field-tag">PROXMOX</span></h3>
-                     <ul class="lab-services"><li>Ubuntu VMs for classes for me and my friends</li><li>Windows VM running only Honeygain</li></ul>
+                     <ul class="lab-services"><li>Ubuntu VMs for coursework with friends</li><li>Windows VM</li></ul>
                   </article>
-               </div>
-               <div class="lab-location">
-                  <p class="eyebrow">QATAR / HOME</p>
-                  <article class="lab-node">
-                     <h3>Home server</h3>
+                  <article class="lab-node layer-detail" id="lab-qatar-detail" aria-labelledby="lab-qatar">
+                     <p class="eyebrow">QATAR / HOME</p>
+                     <h3>Home server <span class="field-tag">ARCHLINUX</span></h3>
                      <ul class="lab-services">
                         <li>Docker containers
-                           <ul><li>Print-by-email service for an old printer</li><li>Minecraft server</li><li>Stremio</li><li>LaTeX compiler</li></ul>
+                           <ul><li>Print-by-email service for an older printer</li><li>Minecraft server</li><li>LaTeX compiler</li></ul>
                         </li>
                      </ul>
                   </article>

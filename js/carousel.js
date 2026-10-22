@@ -52,15 +52,15 @@ function step(dir=1) {
 }
 
 function updateUI() {
-  const ref = state.title;
+  const ref = state[activeTracks[0]];
   dotsWrap.querySelectorAll('.dot').forEach((d, i) => {
     d.classList.toggle('active', i === ref);
     d.setAttribute('aria-current', String(i === ref));
   });
-  Object.values(strips).forEach(strip => {
+  Object.entries(strips).forEach(([name, strip]) => {
     Array.from(strip.children).forEach((slide, i) => {
-      slide.setAttribute('aria-hidden', String(i !== ref));
-      slide.inert = i !== ref;
+      slide.setAttribute('aria-hidden', String(i !== state[name]));
+      slide.inert = i !== state[name];
     });
   });
   counter.textContent = String(ref + 1).padStart(2, '0') + ' / ' + String(TOTAL).padStart(2, '0');
@@ -72,10 +72,16 @@ document.getElementById('nextBtn').addEventListener('click', () => step(1));
 // Chips
 document.querySelectorAll('.chip').forEach(chip => {
   chip.addEventListener('click', () => {
-    document.querySelectorAll('.chip').forEach(c => c.classList.remove('locked'));
+    document.querySelectorAll('.chip').forEach(c => {
+      c.classList.remove('locked');
+      c.setAttribute('aria-pressed', String(c === chip));
+    });
     chip.classList.add('locked');
     const t = chip.dataset.track;
+    const current = state[activeTracks[0]];
     activeTracks = t === 'all' ? ['title','body','image'] : [t];
+    if (t === 'all') goTo(current);
+    else updateUI();
   });
 });
 
@@ -101,6 +107,9 @@ window.addEventListener('resize', () => {
   }, 50);
 });
 
+document.querySelectorAll('.chip').forEach(chip => {
+  chip.setAttribute('aria-pressed', String(chip.dataset.track === 'all'));
+});
 updateUI();
 
 // Advance all project tracks together every five seconds.

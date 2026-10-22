@@ -1,3 +1,18 @@
+// Keep server selection independent of the canvas simulation.
+(() => {
+  const buttons = Array.from(document.querySelectorAll('#homelab [data-lab-target]'));
+  if (!buttons.length) return;
+  function selectServer(selected) {
+    buttons.forEach(button => {
+      const active = button === selected;
+      button.setAttribute('aria-pressed', String(active));
+      document.getElementById(button.dataset.labTarget).hidden = !active;
+    });
+  }
+  buttons.forEach(button => button.addEventListener('click', () => selectServer(button)));
+  selectServer(buttons[0]);
+})();
+
 (() => {
   'use strict';
   const canvas = document.getElementById('flock');
