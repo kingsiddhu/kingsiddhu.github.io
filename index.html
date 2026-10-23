@@ -46,7 +46,7 @@
          </div>
       </header>
       <nav id="navbar" aria-label="Main navigation">
-         <a class="nav-brand" href="./">Siddharth K</a>
+         <h1 class="nav-brand" href="./">Siddharth K</h1>
          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation menu" hidden>
             <span></span><span></span><span></span>
          </button>
@@ -302,7 +302,7 @@ I like solving complex problems and turning ideas into working software.</p>
          <section id="hackathons" class="field-section">
             <div class="field-heading">
                <!--p class="eyebrow">01 / BUILT WITH A TEAM</p-->
-               <h2>The hackathon log.</h2>
+               <h2>The Hackathon log.</h2>
                <p>Small teams. Tight deadlines. Ideas turned into working prototypes.</p></div>
             <a class="event-row" href="https://devpost.com/software/bills-simplified" target="_blank" rel="noopener noreferrer"><span class="event-date">2026<br><small>REVOLUTIONUC</small></span><div><h3>Billify <span aria-hidden="true">↗</span></h3><p>Making medical bills easier to understand, with local OCR and redaction before AI analysis.</p><span class="field-tag">OCR</span><span class="field-tag">GEMINI</span><span class="field-tag">TEAM PROTOTYPE</span></div><span class="event-action">Read the build ↗</span></a>
             <a class="event-row" href="https://devpost.com/software/hass-doom-scrolling-with-a-purpose" target="_blank" rel="noopener noreferrer"><span class="event-date">2025<br><small>MAKEUC</small></span><div><h3>HASS <span aria-hidden="true">↗</span></h3><p>Turning the short-video rabbit hole into a way to discover coding lessons. My focus: frontend and backend integration.</p><span class="field-tag">FASTAPI</span><span class="field-tag">YOUTUBE API</span><span class="field-tag">GEMINI</span></div><span class="event-action">Read the build ↗</span></a>
@@ -314,13 +314,18 @@ I like solving complex problems and turning ideas into working software.</p>
                <h2>A little organized chaos.</h2>
                <p>Three simple rules can create surprisingly lifelike movement. Try this browser sketch inspired by my Godot Boids project.</p>
             </div>
-            <div class="lab-controls"><button id="flock-mode" type="button" aria-pressed="false" aria-controls="flock-2d flock-3d" aria-describedby="flock-mode-note" hidden>Switch to 3D</button><span id="flock-mode-note">3D loads only when selected. Switch back to unload it.</span></div>
+            <div class="flock-panel">
+            <div class="lab-controls flock-toolbar">
+               <!---span class="eyebrow">001 / FLOCKING LAB</span--->
+               <span id="flock-mode-note">3D loads only when selected. Switch back to unload it.</span>
+               <button id="flock-mode" type="button" aria-pressed="false" aria-controls="flock-2d flock-3d" aria-describedby="flock-mode-note" hidden>Switch to 3D</button></div>
             <div id="flock-2d">
-            <div class="flock-stage"><canvas id="flock" aria-label="Animated flocking demonstration. Agents follow separation, alignment, and cohesion rules."></canvas><span class="stage-label">EXPERIMENT 001 / FLOCKING</span><span class="stage-hint">Move your pointer to stir the flock</span></div>
+            <div class="flock-stage"><canvas id="flock" aria-label="Animated flocking demonstration. Agents follow separation, alignment, and cohesion rules."></canvas><!--span class="stage-label">EXPERIMENT 001 / FLOCKING</span--><span class="stage-hint">Move your pointer to stir the flock</span></div>
             <div class="lab-controls"><label for="cohesion">Togetherness <input id="cohesion" type="range" min="0" max="100" value="45"><output id="cohesion-value" for="cohesion">45%</output></label><button id="flock-toggle" type="button" aria-pressed="false">Pause simulation</button><button id="flock-reset" type="button">Reshuffle ↻</button></div>
             <div class="rule-strip"><p><b>01 / Separation</b>Leave a little room.</p><p><b>02 / Alignment</b>Follow the local direction.</p><p><b>03 / Cohesion</b>Find your neighbors.</p></div>
             </div>
             <div id="flock-3d" class="flock-stage" hidden></div>
+            </div>
             <noscript><p>Enable JavaScript to run the interactive flocking sketch.</p></noscript>
          </section>
 
@@ -372,8 +377,16 @@ I like solving complex problems and turning ideas into working software.</p>
          </section>
 
          <section id="offscreen" class="field-section">
-            <div class="field-heading"><p class="eyebrow">04 / THE OTHER SIDE OF THE DESK</p><h2>Still making things.</h2><p>Code is one medium. Games, animation, and writing are a few more.</p></div>
-            <div class="creative-grid"><a href="https://kingstudios.itch.io/" target="_blank" rel="noopener noreferrer"><span class="creative-symbol" aria-hidden="true">＋</span><p class="eyebrow">KING STUDIOS / GAMES</p><h3>Worlds to get lost in. ↗</h3><p>Explore the game-making side of my work on itch.io.</p></a><a href="https://www.youtube.com/@KingStudiosYT" target="_blank" rel="noopener noreferrer"><span class="creative-symbol" aria-hidden="true">▷</span><p class="eyebrow">VIDEO / CREATIVE WORK</p><h3>Beyond the source code. ↗</h3><p>Find my videos and creative work on the King Studios channel.</p></a><a href="/pages/blogs-page.html"><span class="creative-symbol" aria-hidden="true">✳</span><p class="eyebrow">WRITING / NOTES</p><h3>A place for the tangents. ↗</h3><p>Visit the blog for another side of what I make and think about.</p></a></div>
+            <div class="field-heading">
+               <!--p class="eyebrow">04 / THE OTHER SIDE OF THE DESK</p-->
+               <h2>Still making things.</h2>
+               <p>Code is one medium. Games, animation, and writing are a few more.</p>
+            </div>
+            <div class="creative-grid">
+               <a href="https://kingstudios.itch.io/" target="_blank" rel="noopener noreferrer"><span class="creative-symbol" aria-hidden="true">＋</span><p class="eyebrow">KING STUDIOS / GAMES</p><h3>Worlds to get lost in. ↗</h3><p>Explore the game-making side of my work on itch.io.</p></a>
+               <a href="https://www.youtube.com/@KingStudiosYT" target="_blank" rel="noopener noreferrer"><span class="creative-symbol" aria-hidden="true">▷</span><p class="eyebrow">VIDEO / CREATIVE WORK</p><h3>Beyond the source code. ↗</h3><p>Find my videos and creative work on the King Studios channel.</p></a>
+               <a href="/pages/blogs-page.html"><span class="creative-symbol" aria-hidden="true">✳</span><p class="eyebrow">WRITING / NOTES</p><h3>A place for the tangents. ↗</h3><p>Visit the blog for another side of what I make and think about.</p></a>
+            </div>
          </section>
          <section class="field-section contact-note"><p class="eyebrow">HAVE A STRANGE, INTERESTING IDEA?</p><h2>Let's make it work.</h2><a href="mailto:siddharth.kata.dev@gmail.com">siddharth.kata.dev@gmail.com <span aria-hidden="true">↗</span></a></section>
       </div>
@@ -413,7 +426,7 @@ I like solving complex problems and turning ideas into working software.</p>
 
       </div>
       </footer>
-      <p class="site-credit">Siddharth · 2026</p>
+      <cc class="site-credit">Siddharth · 2026</cc>
 
 
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>

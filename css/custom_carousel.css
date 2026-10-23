@@ -174,6 +174,11 @@ h1, h2, h3 {
     grid-row: 2;
   }
 }
+
+@media (min-aspect-ratio : 1/1) {
+  .nav-btn { width: 30px; height: 200px; border-radius: 15px;}
+ 
+}
 .image-slide img {
   width: 100%;
   height: 100%;
@@ -257,7 +262,6 @@ h1, h2, h3 {
 .indicators { flex-wrap: wrap; }
 @media (max-width: 700px) {
  .carousel-wrapper { gap: 6px; padding: 0 8px; }
- .nav-btn { width: 30px; height: 200px; border-radius: 15px;}
  .title-section { padding: 2px 18px 0; }
  .content-row { padding: 0 18px 20px; gap: 16px; }
  .body-slide { font-size: 1rem; }

@@ -1,5 +1,5 @@
 /* Explicit targets keep all project carousel elements outside these effects. */
-:is(#navbar a, #navbar .nav-toggle, .field-links a, .lab-controls button,
+:is(#navbar h1, #navbar .nav-toggle, .field-links a, .lab-controls button,
     .lab-map button, .event-row, .creative-grid a, .contact-note a, #footer a) {
   transition: transform 180ms ease, background-color 180ms ease,
     color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
@@ -17,7 +17,7 @@
 
 /* Hover motion only runs on devices with an accurate, hover-capable pointer. */
 @media (hover: hover) and (pointer: fine) {
-  :is(#navbar a, #navbar .nav-toggle, .field-links a, .lab-controls button,
+  :is(#navbar h1, #navbar .nav-toggle, .field-links a, .lab-controls button,
       .contact-note a, #footer a):hover {
     transform: translateY(-3px);
   }
@@ -34,20 +34,20 @@
   .creative-grid a:hover .creative-symbol { transform: translateY(-4px) rotate(8deg); }
 }
 
-:is(#navbar a, #navbar .nav-toggle, .field-links a, .lab-controls button,
+:is(#navbar h1, #navbar .nav-toggle, .field-links a, .lab-controls button,
     .lab-map button, .event-row, .creative-grid a, .contact-note a, #footer a):focus-visible {
   outline: 2px solid #c9a96e;
   outline-offset: 5px;
 }
 
-:is(#navbar a, #navbar .nav-toggle, .field-links a, .lab-controls button,
+:is(#navbar h1, #navbar .nav-toggle, .field-links a, .lab-controls button,
     .lab-map button, .event-row, .creative-grid a, .contact-note a, #footer a):active {
   transform: translateY(1px) scale(.98);
 }
 
 /* Preserve immediate state feedback for visitors who prefer less motion. */
 @media (prefers-reduced-motion: reduce) {
-  :is(#navbar a, #navbar .nav-toggle, .field-links a, .lab-controls button,
+  :is(#navbar h1, #navbar .nav-toggle, .field-links a, .lab-controls button,
       .lab-map button, .event-row, .creative-grid a, .contact-note a, #footer a),
   :is(.field-links a span, .contact-note a span, .event-action,
       .creative-symbol, .lab-map button span, .event-row h3, .creative-grid a h3) {
