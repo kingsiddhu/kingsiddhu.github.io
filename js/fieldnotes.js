@@ -22,6 +22,20 @@
   const slider = document.getElementById('cohesion');
   const toggle = document.getElementById('flock-toggle');
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const modeToggle = document.getElementById('flock-mode');
+  const twoD = document.getElementById('flock-2d');
+  const threeD = document.getElementById('flock-3d');
+  let is3D = false;
+  let instructionsShown = false;
+  let switching = false;
+  async function fadePanel(panel, entering) {
+    if (motion.matches) return;
+    const animation = panel.animate(
+      [{ opacity: entering ? 0 : 1 }, { opacity: entering ? 1 : 0 }],
+      { duration: 180, easing: 'ease-in-out' }
+    );
+    await animation.finished;
+  }
   let paused = motion.matches, visible = false, frame = null, last = 0, width = 1, height = 1;
   let birds = [], pointer = null;
   function seed() {
@@ -77,7 +91,7 @@
   }
   function tick(time) {
     frame = null;
-    if (paused || !visible || document.hidden) return;
+    if (is3D || paused || !visible || document.hidden) return;
     step(Math.min((time - (last || time)) / 16.667, 2)); last = time; draw();
     frame = requestAnimationFrame(tick);
   }
@@ -86,8 +100,83 @@
     toggle.setAttribute('aria-pressed', String(paused));
     if (frame !== null) cancelAnimationFrame(frame);
     frame = null; last = 0;
-    if (!paused && visible && !document.hidden) frame = requestAnimationFrame(tick);
+    if (!is3D && !paused && visible && !document.hidden) frame = requestAnimationFrame(tick);
   }
+  modeToggle.hidden = false;
+  modeToggle.addEventListener('click', async () => {
+    if (switching) return;
+    switching = true;
+    modeToggle.setAttribute('aria-disabled', 'true');
+    await fadePanel(is3D ? threeD : twoD, false);
+    is3D = !is3D;
+    twoD.hidden = is3D;
+    threeD.hidden = !is3D;
+    modeToggle.textContent = is3D ? 'Switch to 2D' : 'Switch to 3D';
+    modeToggle.setAttribute('aria-pressed', String(is3D));
+    pointer = null;
+    sync();
+    if (is3D) {
+      // Do not create the browsing context or fetch the Godot export until requested.
+      const iframe = document.createElement('iframe');
+      iframe.title = '3D Boids flocking simulation';
+      iframe.src = 'Boids/Boids.html';
+      iframe.allow = 'autoplay; fullscreen';
+      threeD.appendChild(iframe);
+      const helpButton = document.createElement('button');
+      helpButton.type = 'button';
+      helpButton.className = 'flock-help';
+      helpButton.textContent = 'Controls';
+      helpButton.setAttribute('aria-expanded', 'false');
+      helpButton.setAttribute('aria-controls', 'flock-instructions');
+      threeD.appendChild(helpButton);
+      function showInstructions() {
+        if (threeD.querySelector('.flock-instructions')) return;
+        const overlay = document.createElement('div');
+        overlay.id = 'flock-instructions';
+        overlay.className = 'flock-instructions';
+        overlay.setAttribute('role', 'region');
+        overlay.setAttribute('aria-labelledby', 'flock-instructions-title');
+        overlay.innerHTML = `
+          <div class="flock-instructions-card">
+            <h3 id="flock-instructions-title">Explore the 3D flock</h3>
+            <ul>
+              <li><b>WASD</b> — movement in view</li>
+              <li><b>R</b> — Reset</li>
+              <li>Hold <b>Left click</b> and move to rotate</li>
+              <li><b>Scroll</b> to scroll</li>
+            </ul>
+            <button type="button">Got it — enter simulation</button>
+          </div>`;
+        iframe.inert = true;
+        helpButton.setAttribute('aria-expanded', 'true');
+        const dismiss = () => {
+          overlay.remove();
+          iframe.inert = false;
+          helpButton.setAttribute('aria-expanded', 'false');
+          helpButton.focus();
+        };
+        const dismissButton = overlay.querySelector('button');
+        dismissButton.addEventListener('click', dismiss);
+        overlay.addEventListener('keydown', event => {
+          if (event.key === 'Escape') dismiss();
+        });
+        threeD.appendChild(overlay);
+        dismissButton.focus();
+      }
+      helpButton.addEventListener('click', showInstructions);
+      if (!instructionsShown) {
+        instructionsShown = true;
+        showInstructions();
+      }
+    } else {
+      // Removing the frame tears down its engine and stops its animation/audio.
+      threeD.replaceChildren();
+      resize();
+    }
+    await fadePanel(is3D ? threeD : twoD, true);
+    switching = false;
+    modeToggle.removeAttribute('aria-disabled');
+  });
   toggle.addEventListener('click', () => { paused = !paused; sync(); });
   document.getElementById('flock-reset').addEventListener('click', () => { seed(); draw(); });
   slider.addEventListener('input', () => { document.getElementById('cohesion-value').textContent = `${slider.value}%`; });

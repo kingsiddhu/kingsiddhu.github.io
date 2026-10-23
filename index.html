@@ -314,9 +314,13 @@ I like solving complex problems and turning ideas into working software.</p>
                <h2>A little organized chaos.</h2>
                <p>Three simple rules can create surprisingly lifelike movement. Try this browser sketch inspired by my Godot Boids project.</p>
             </div>
+            <div class="lab-controls"><button id="flock-mode" type="button" aria-pressed="false" aria-controls="flock-2d flock-3d" aria-describedby="flock-mode-note" hidden>Switch to 3D</button><span id="flock-mode-note">3D loads only when selected. Switch back to unload it.</span></div>
+            <div id="flock-2d">
             <div class="flock-stage"><canvas id="flock" aria-label="Animated flocking demonstration. Agents follow separation, alignment, and cohesion rules."></canvas><span class="stage-label">EXPERIMENT 001 / FLOCKING</span><span class="stage-hint">Move your pointer to stir the flock</span></div>
             <div class="lab-controls"><label for="cohesion">Togetherness <input id="cohesion" type="range" min="0" max="100" value="45"><output id="cohesion-value" for="cohesion">45%</output></label><button id="flock-toggle" type="button" aria-pressed="false">Pause simulation</button><button id="flock-reset" type="button">Reshuffle ↻</button></div>
             <div class="rule-strip"><p><b>01 / Separation</b>Leave a little room.</p><p><b>02 / Alignment</b>Follow the local direction.</p><p><b>03 / Cohesion</b>Find your neighbors.</p></div>
+            </div>
+            <div id="flock-3d" class="flock-stage" hidden></div>
             <noscript><p>Enable JavaScript to run the interactive flocking sketch.</p></noscript>
          </section>
 
