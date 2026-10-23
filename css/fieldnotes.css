@@ -7,7 +7,6 @@
 .field-section p { line-height: 1.75; }
 .field-heading { max-width: 700px; margin-bottom: 36px; }
 .field-heading > p:last-child, .intro-note > p:not(.eyebrow) { color: var(--muted); max-width: 640px; }
-.intro-note { border-left: 2px solid #c9a96e; }
 .field-links { display: flex; flex-wrap: wrap; gap: 14px 32px; margin-top: 28px; }
 .field-links a { border-bottom: 1px solid #706349; padding: 8px 0; }
 .field-links span { margin-left: 20px; color: var(--signal); }

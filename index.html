@@ -84,7 +84,7 @@ I like solving complex problems and turning ideas into working software.</p>
 
          </section>
          <section class="field-section intro-note" aria-label="Explore my work">
-            <p class="eyebrow">GAMES / INTELLIGENCE / INFRASTRUCTURE</p>
+            <!--p class="eyebrow">GAMES / INTELLIGENCE / INFRASTRUCTURE</p-->
             <h2>Curiosity is the common thread.</h2>
             <p>A flock of autonomous agents. A server running at home. A music player with a real dial. I like software that reaches beyond the screen.</p>
             <div class="field-links"><a href="#projects">Explore the builds <span aria-hidden="true">↘</span></a><a href="#playground">Play with an idea <span aria-hidden="true">↘</span></a></div>
@@ -300,13 +300,20 @@ I like solving complex problems and turning ideas into working software.</p>
          </div>
 
          <section id="hackathons" class="field-section">
-            <div class="field-heading"><p class="eyebrow">01 / BUILT WITH A TEAM</p><h2>The hackathon log.</h2><p>Small teams. Tight deadlines. Ideas turned into working prototypes.</p></div>
+            <div class="field-heading">
+               <!--p class="eyebrow">01 / BUILT WITH A TEAM</p-->
+               <h2>The hackathon log.</h2>
+               <p>Small teams. Tight deadlines. Ideas turned into working prototypes.</p></div>
             <a class="event-row" href="https://devpost.com/software/bills-simplified" target="_blank" rel="noopener noreferrer"><span class="event-date">2026<br><small>REVOLUTIONUC</small></span><div><h3>Billify <span aria-hidden="true">↗</span></h3><p>Making medical bills easier to understand, with local OCR and redaction before AI analysis.</p><span class="field-tag">OCR</span><span class="field-tag">GEMINI</span><span class="field-tag">TEAM PROTOTYPE</span></div><span class="event-action">Read the build ↗</span></a>
             <a class="event-row" href="https://devpost.com/software/hass-doom-scrolling-with-a-purpose" target="_blank" rel="noopener noreferrer"><span class="event-date">2025<br><small>MAKEUC</small></span><div><h3>HASS <span aria-hidden="true">↗</span></h3><p>Turning the short-video rabbit hole into a way to discover coding lessons. My focus: frontend and backend integration.</p><span class="field-tag">FASTAPI</span><span class="field-tag">YOUTUBE API</span><span class="field-tag">GEMINI</span></div><span class="event-action">Read the build ↗</span></a>
          </section>
 
          <section id="playground" class="field-section">
-            <div class="field-heading"><p class="eyebrow">02 / LESS SCROLLING, MORE EXPLORING</p><h2>A little organized chaos.</h2><p>Three simple rules can create surprisingly lifelike movement. Try this browser sketch inspired by my Godot Boids project.</p></div>
+            <div class="field-heading">
+               <!--p class="eyebrow">02 / LESS SCROLLING, MORE EXPLORING</p-->
+               <h2>A little organized chaos.</h2>
+               <p>Three simple rules can create surprisingly lifelike movement. Try this browser sketch inspired by my Godot Boids project.</p>
+            </div>
             <div class="flock-stage"><canvas id="flock" aria-label="Animated flocking demonstration. Agents follow separation, alignment, and cohesion rules."></canvas><span class="stage-label">EXPERIMENT 001 / FLOCKING</span><span class="stage-hint">Move your pointer to stir the flock</span></div>
             <div class="lab-controls"><label for="cohesion">Togetherness <input id="cohesion" type="range" min="0" max="100" value="45"><output id="cohesion-value" for="cohesion">45%</output></label><button id="flock-toggle" type="button" aria-pressed="false">Pause simulation</button><button id="flock-reset" type="button">Reshuffle ↻</button></div>
             <div class="rule-strip"><p><b>01 / Separation</b>Leave a little room.</p><p><b>02 / Alignment</b>Follow the local direction.</p><p><b>03 / Cohesion</b>Find your neighbors.</p></div>
@@ -314,14 +321,18 @@ I like solving complex problems and turning ideas into working software.</p>
          </section>
 
          <section id="homelab" class="field-section">
-            <div class="field-heading"><p class="eyebrow">03 / MY CORNER OF THE INTERNET</p><h2>Cloud, with two home addresses.</h2><p>A personal homelab across the USA and Qatar for self-hosted services, game servers, and hands-on learning.</p></div>
+            <div class="field-heading">
+               <!--p class="eyebrow">03 / MY CORNER OF THE INTERNET</p-->
+               <h2>Cloud, with two home addresses.</h2>
+               <p>A personal homelab across the USA and Qatar for self-hosted services, game servers, and hands-on learning.</p>
+            </div>
             <div class="homelab-layout">
                <div class="lab-map" role="group" aria-label="Choose a homelab server">
                   <p class="map-entry">USA / TWO NODES</p>
                   <button type="button" id="lab-node01" data-lab-target="lab-node01-detail" aria-controls="lab-node01-detail" aria-pressed="true">Node01 <span>DEBIAN</span></button>
                   <div class="map-line" aria-hidden="true"></div>
                   <button type="button" id="lab-node02" data-lab-target="lab-node02-detail" aria-controls="lab-node02-detail" aria-pressed="false">Node02 <span>PROXMOX</span></button>
-                  <div class="map-line" aria-hidden="true"></div>
+                  <div style="height: 24px;" aria-hidden="true"></div>
                   <p class="map-entry">QATAR / HOME</p>
                   <button type="button" id="lab-qatar" data-lab-target="lab-qatar-detail" aria-controls="lab-qatar-detail" aria-pressed="false">Home server <span>ARCHLINUX</span></button>
                </div>
