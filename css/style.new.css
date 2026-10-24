@@ -66,7 +66,7 @@ header {
   font-size: max(1.5vw, 1.5vh);
 }
 
-@media (max-aspect-ratio : 1/1) {
+@media (max-width: 1000px) {
   #navbar a{
 
   width: 24vw;
@@ -186,7 +186,7 @@ section {
 }
 
 .wrapper {
-  width: 75vw;
+  width: min(100%, max(75vw, 1000px));
   margin: 0 auto;
 }
 
@@ -209,12 +209,12 @@ section {
   height:70vh;
 }
 
-@media (max-aspect-ratio : 1/1) {
+@media (max-width: 1000px) {
   section {
     margin-top: 5px;
   }
   .wrapper {
-    width: 100vw;
+    width: 100%;
   }
   .flexbox {
     display: block;

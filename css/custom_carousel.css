@@ -35,7 +35,7 @@ h1, h2, h3 {
 /* Card — NO overflow:hidden on the card itself */
 .carousel {
   flex: 1;
-  width: 63vw;
+  min-width: 0;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -162,10 +162,11 @@ h1, h2, h3 {
   overflow: hidden;
   position: relative;
 }
-@media (max-aspect-ratio : 1/1) {
+@media (max-width: 1000px) {
   
   .content-row {
     display: grid;
+    grid-template-columns: minmax(0, 1fr);
   }
   .image-col{
     width: 100%;
@@ -269,12 +270,12 @@ h1, h2, h3 {
  .image-slide { height: 180px; }
 }
 @media (max-width: 1000px) {
- .content-row { display: grid; }
+ .content-row { display: grid; grid-template-columns: minmax(0, 1fr); }
  .image-col { width: 100%; grid-row: 1; }
  .body-col { grid-row: 2; }
 }
 
-@media (max-aspect-ratio : 1/1) {
+@media (max-width: 1000px) {
   .nav-btn { width: 30px; height: 200px; border-radius: 15px;}
  .carousel-wrapper { gap: 6px; padding: 0 8px; }
 }
