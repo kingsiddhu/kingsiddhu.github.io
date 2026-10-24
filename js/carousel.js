@@ -112,5 +112,4 @@ document.querySelectorAll('.chip').forEach(chip => {
 });
 updateUI();
 
-// Advance all project tracks together every five seconds.
-setInterval(() => step(1), 5000);
+// Keep projects stationary so visitors can read and inspect source links.

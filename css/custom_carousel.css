@@ -279,3 +279,6 @@ h1, h2, h3 {
   .nav-btn { width: 30px; height: 200px; border-radius: 15px;}
  .carousel-wrapper { gap: 6px; padding: 0 8px; }
 }
+
+#projects { scroll-margin-top: 90px; }
+.image-slide img { object-fit: contain; background: #10191d; filter: none; }
