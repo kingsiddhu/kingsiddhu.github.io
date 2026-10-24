@@ -1,0 +1,22 @@
+#skills { text-align: left; overflow: hidden; }
+#skills * { box-sizing: border-box; }
+.skill-lanes { border-top: 1px solid #383631; }
+.skill-lane { --lane-color: #c9a96e; display: grid; grid-template-columns: minmax(0, 1fr); border-bottom: 1px solid #383631; padding: 7px 0; }
+.skill-lane:nth-child(2) { --lane-color: #83b7c9; }
+.skill-lane:nth-child(3) { --lane-color: #b6a0d8; }
+.skill-lane:nth-child(4) { --lane-color: #91b89d; }
+.skill-lane:nth-child(5) { --lane-color: #ceaa8e; }
+.skill-lane:nth-child(6) { --lane-color: #d391a1; }
+.skill-window { min-width: 0; overflow: hidden; display: flex; align-items: center; mask-image: linear-gradient(to right, transparent, #000 24px, #000 calc(100% - 32px), transparent); }
+.skill-track { display: flex; width: max-content; }
+.skill-set { display: flex; align-items: center; gap: 8px; flex-shrink: 0; list-style: none; padding: 0 8px 0 0; margin: 0; }
+.skill-set li { display: flex; align-items: center; gap: 8px; white-space: nowrap; padding: 6px 11px; border: 1px solid #343438; background: #1c1c1f; border-radius: 4px; color: #dedbd5; font-size: 12px; }
+.skill-set i, .skill-set svg { color: var(--lane-color); }
+.skills-ready .skill-track { animation: skill-drift var(--duration, 65s) linear infinite; }
+.skills-ready .skill-lane:nth-child(even) .skill-track { animation-direction: reverse; }
+@keyframes skill-drift { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) {
+  .skills-ready .skill-track { animation: none; transform: none; }
+  .skill-window { overflow-x: auto; mask-image: none; }
+  .skill-set[aria-hidden] { display: none; }
+}

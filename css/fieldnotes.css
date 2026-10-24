@@ -2,7 +2,8 @@
 .field-section { --ink: #e9e7e1; --muted: #aaa9a3; --signal: #c9a96e; color: var(--ink); text-align: left; scroll-margin-top: 5rem; }
 .field-section * { box-sizing: border-box; }
 .field-section .eyebrow { font: 12px/1.8 Consolas, monospace; letter-spacing: .15em; color: var(--signal); margin: 0 0 18px; }
-.field-section h2 { font-size: clamp(2rem, 4.5vw, 4rem); line-height: 1.08; letter-spacing: -.045em; margin: 0 0 24px; font-weight: 600; }
+.field-section h2, .section-title { font-size: clamp(2rem, 4.5vw, 4rem); line-height: 1.08; letter-spacing: -.045em; margin: 0 0 24px; font-weight: 600; }
+.section-title { color: #e9e7e1; text-align: left; }
 .field-section h3 { margin: 0 0 12px; font-size: 1.6rem; line-height: 1.25; letter-spacing: -.025em; }
 .field-section p { line-height: 1.75; }
 .field-heading { max-width: 700px; margin-bottom: 36px; }

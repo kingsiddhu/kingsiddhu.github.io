@@ -53,6 +53,11 @@ h1, h2, h3 {
   text-align: center;
 }
 
+.projects-heading { padding: 28px 36px 0; }
+@media (max-width: 700px) {
+  .projects-heading { padding: 24px 18px 0; }
+}
+
 /* ─── Track pattern ───────────────────────────────────────────
    .track-clip  → clips to exactly its own width (overflow:hidden)
    .track-strip → flex row that slides via translateX px
