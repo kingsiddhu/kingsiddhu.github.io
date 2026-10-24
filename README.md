@@ -2,7 +2,7 @@
 
 Hand-built static website hosted with GitHub Pages at https://siddharthk.is-a.dev/.
 
-The homepage uses `css/style.new.css`, `css/css.css`, `css/custom_carousel.css`, and `js/carousel.js`. No build step is required.
+The homepage uses `css/portfolio.css` for its foundation, `css/fieldnotes.css` for the interactive sections, and `css/navbar.css` with `js/navbar.js` for navigation. `js/fieldnotes.js` runs the flocking demo and homelab selector. No build step is required.
 
 ## Content review — October 22, 2026
 
@@ -12,6 +12,6 @@ The homepage uses `css/style.new.css`, `css/css.css`, `css/custom_carousel.css`,
 - Carousel landscapes are illustrative images, not screenshots. Unfinished placeholder entries were removed.
 - Early blog posts are archived. The outdated referral/earnings instructions were retired rather than presented as current advice.
 
-To update projects, keep the title, body, and image tracks in the same order and with equal entry counts. The carousel derives its count from the title track.
+To update projects, edit the semantic project articles in `index.html`. The first three builds are visible; the remaining personal projects live in a native details archive. The homepage no longer loads the legacy carousel, skill marquees, background video, or typing library.
 
 The original author permits adapting this code, but asks that you do not make an exact copy of the site.
