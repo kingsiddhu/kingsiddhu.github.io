@@ -1,0 +1,21 @@
+# Siddharth Katabathula
+
+> Personal portfolio covering game development, AI agents, cybersecurity, hardware, and self-hosted systems.
+
+The canonical website is https://siddharthk.is-a.dev/. King Siddhu and King Studios are names used on this site. Project descriptions include experiments and prototypes; team submissions are identified as team projects. Early blog posts are historical material and may contain outdated information.
+
+## Portfolio
+
+- [Portfolio summary](https://siddharthk.is-a.dev/index.md): Markdown summary of projects, writing, contact details, and profiles.
+- [Full portfolio](https://siddharthk.is-a.dev/): Current project descriptions, local visuals, source links, homelab details, and creative work.
+
+## Writing
+
+- [Blog posts](https://siddharthk.is-a.dev/pages/blogs/new-posts.html): CTF notes, hackathon project links, and early writing.
+- [BearcatCTF 2026](https://siddharthk.is-a.dev/pages/blogs/bearcat-ctf-2026.html): Challenge index and links to competition solutions.
+- [OhioCTF 2026](https://siddharthk.is-a.dev/pages/blogs/ohio-ctf-2026.html): Team result and event context; the team write-up section is a draft.
+
+## Optional
+
+- [Early blog archive](https://siddharthk.is-a.dev/pages/blogs-page.html): Historical posts and web experiments.
+- [Sitemap](https://siddharthk.is-a.dev/sitemap.xml): Canonical public page URLs.

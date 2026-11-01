@@ -1,1 +1,5 @@
-sitemap: https://siddharthk.is-a.dev/sitemap.xml
+# Public pages and assets are available to search and AI crawlers.
+User-agent: *
+Allow: /
+
+Sitemap: https://siddharthk.is-a.dev/sitemap.xml

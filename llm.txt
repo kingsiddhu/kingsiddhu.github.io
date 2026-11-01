@@ -1,0 +1,8 @@
+# Siddharth Katabathula
+
+> Personal portfolio: games, AI, cybersecurity, and self-hosted systems.
+
+## AI-readable resources
+
+- [llms.txt](https://siddharthk.is-a.dev/llms.txt): The maintained discovery file using the llms.txt convention.
+- [Portfolio summary](https://siddharthk.is-a.dev/index.md): Projects, writing, profiles, and contact information in Markdown.
