@@ -4,6 +4,30 @@ Hand-built static website hosted with GitHub Pages at https://siddharthk.is-a.de
 
 The homepage uses `css/style.new.css`, `css/css.css`, `css/custom_carousel.css`, and `js/carousel.js`. No build step is required.
 
+## Deploy to Node01
+
+The **Deploy website to Node01** workflow runs after a push to `main`. A GitHub-hosted runner joins the tailnet, connects to Node01 over OpenSSH, and fast-forwards the checkout Nginx serves. You can also run it from the repository's Actions tab on `main`.
+
+1. In [Tailscale access controls](https://login.tailscale.com/admin/acls), create `tag:website-deploy` and grant it TCP port 22 access to Node01's Tailscale IP. In [Trust credentials](https://login.tailscale.com/admin/settings/trust-credentials), create a federated identity with issuer `https://token.actions.githubusercontent.com`, subject `repo:kingsiddhu/kingsiddhu.github.io:ref:refs/heads/main`, the Auth Keys write scope, and `tag:website-deploy`. For the custom claim rule, match `workflow_ref` to `kingsiddhu/kingsiddhu.github.io/.github/workflows/deploy-node01.yml@refs/heads/main`.
+2. From a directory outside the repo on a trusted computer, run `ssh-keygen -t ed25519 -f website-deploy` and leave the passphrase blank for unattended use. Copy `scripts/deploy-node01.sh` to Node01 with Unix line endings and install it as `/usr/local/bin/deploy-website` using `sudo install -o root -g root -m 0755 deploy-node01.sh /usr/local/bin/deploy-website`. Use the existing checkout owner as the deployment user on Node01's OpenSSH server. Confirm that this user can write to the checkout, Nginx can read it, the checked-out branch is `main`, and `origin` points to this GitHub repo. Append the following line to the deployment user's `~/.ssh/authorized_keys`, substituting the actual checkout path and the complete contents of `website-deploy.pub`.
+
+   ```text
+   restrict,command="/usr/local/bin/deploy-website '/absolute/path/to/live/checkout'" ssh-ed25519 REPLACE_WITH_DEPLOY_PUBLIC_KEY
+   ```
+
+3. Under [Settings → Secrets and variables → Actions](https://github.com/kingsiddhu/kingsiddhu.github.io/settings/secrets/actions), enter these settings. For the host key, take the key type and key from Node01's `/etc/ssh/ssh_host_ed25519_key.pub` over an already trusted session. Use Node01's Tailscale hostname or IP as the first field of the `known_hosts` line.
+
+   | Setting | Type | Value |
+   | --- | --- | --- |
+   | `TS_CLIENT_ID` | Variable | Tailscale federated identity client ID |
+   | `TS_AUDIENCE` | Variable | Tailscale federated identity audience |
+   | `WEBSITE_SSH_HOST` | Variable | Node01's full Tailscale hostname or Tailscale IP |
+   | `WEBSITE_SSH_USER` | Variable | Linux user who owns the live checkout |
+   | `WEBSITE_SSH_KNOWN_HOSTS` | Variable | One line in the form `HOST ssh-ed25519 HOST_PUBLIC_KEY` |
+   | `WEBSITE_SSH_PRIVATE_KEY` | Secret | Full contents of the generated `website-deploy` private key |
+
+4. Push the workflow to `main` and check its Actions log for `Website deployed at` and the new commit SHA. If a run fails, fix the reported issue and rerun it. The deployment stops if the checkout has tracked edits, is on the wrong branch, or has commits that have diverged from or are ahead of GitHub.
+
 ## Content review — October 22, 2026
 
 - Billify: https://devpost.com/software/bills-simplified — team submission to RevolutionUC 2026, local OCR/redaction and Gemini analysis; redaction validation remains future work.

@@ -1,0 +1,51 @@
+name: Deploy website to Node01
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    if: github.repository == 'kingsiddhu/kingsiddhu.github.io' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    concurrency:
+      group: deploy-website-node01
+      cancel-in-progress: false
+    permissions:
+      id-token: write
+    steps:
+      - name: Connect to Tailscale
+        uses: tailscale/github-action@064b10558093f38325e838ddea35486bdc6b1d5c # v4.4.0
+        with:
+          oauth-client-id: ${{ vars.TS_CLIENT_ID }}
+          audience: ${{ vars.TS_AUDIENCE }}
+          tags: tag:website-deploy
+
+      - name: Update the live checkout
+        shell: bash
+        env:
+          DEPLOY_HOST: ${{ vars.WEBSITE_SSH_HOST }}
+          DEPLOY_USER: ${{ vars.WEBSITE_SSH_USER }}
+          SSH_HOST_KEY: ${{ vars.WEBSITE_SSH_KNOWN_HOSTS }}
+          SSH_PRIVATE_KEY: ${{ secrets.WEBSITE_SSH_PRIVATE_KEY }}
+        run: |
+          set -euo pipefail
+          : "${DEPLOY_HOST:?Set WEBSITE_SSH_HOST}"
+          : "${DEPLOY_USER:?Set WEBSITE_SSH_USER}"
+          : "${SSH_HOST_KEY:?Set WEBSITE_SSH_KNOWN_HOSTS}"
+          : "${SSH_PRIVATE_KEY:?Set WEBSITE_SSH_PRIVATE_KEY}"
+
+          umask 077
+          ssh_dir=$(mktemp -d)
+          trap 'rm -rf -- "$ssh_dir"' EXIT
+          printf '%s\n' "$SSH_PRIVATE_KEY" > "$ssh_dir/key"
+          printf '%s\n' "$SSH_HOST_KEY" > "$ssh_dir/known_hosts"
+          unset SSH_PRIVATE_KEY
+
+          ssh -F /dev/null -T -i "$ssh_dir/key" \
+            -o BatchMode=yes -o IdentitiesOnly=yes -o ConnectTimeout=15 \
+            -o StrictHostKeyChecking=yes -o GlobalKnownHostsFile=/dev/null \
+            -o "UserKnownHostsFile=$ssh_dir/known_hosts" \
+            -l "$DEPLOY_USER" -- "$DEPLOY_HOST" deploy-website
